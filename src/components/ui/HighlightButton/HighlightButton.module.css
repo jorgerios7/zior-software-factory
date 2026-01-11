@@ -1,0 +1,18 @@
+.button {
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #0091ffe2, #00d084d1);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
