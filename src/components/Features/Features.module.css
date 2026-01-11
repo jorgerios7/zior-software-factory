@@ -1,0 +1,32 @@
+.features {
+    width: 100%;
+    min-height: calc(100vh - 20px);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 24px;
+
+    padding: 70px 48px;
+
+    background: radial-gradient(circle at left,
+            rgba(0, 224, 255, 0.08),
+            transparent 40%),
+        linear-gradient(400deg, #000001 0%, #050b17 100%);
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.featuresList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}

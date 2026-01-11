@@ -9,11 +9,9 @@
   padding: 10px 48px;
   gap: 64px;
 
-  background: radial-gradient(
-      circle at left,
+  background: radial-gradient(circle at left,
       rgba(0, 224, 255, 0.08),
-      transparent 40%
-    ),
+      transparent 40%),
     linear-gradient(400deg, #000001 0%, #050b17 100%);
 
   box-sizing: border-box;
@@ -24,37 +22,10 @@
   max-width: 560px;
 }
 
-.badge {
-  display: inline-block;
-  padding: 6px 14px;
-  margin-bottom: 24px;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  color: #00e0ff;
-  border: 1px solid rgba(0, 224, 255, 0.4);
-  border-radius: 999px;
-  background: rgba(0, 224, 255, 0.08);
-}
-
 .title {
-  font-size: 56px;
-  line-height: 1.1;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 24px;
-}
-
-.title span {
-  color: #00e0ff;
-}
-
-.description {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #9ca3af;
-  margin-bottom: 40px;
+    font-size: 56px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 /* Botões */

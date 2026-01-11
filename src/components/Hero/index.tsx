@@ -11,13 +11,13 @@ export default function Hero() {
       <div className={styles.content}>
         <Badge label={"Soluções em Tecnologia"} />
 
-        <h1 className={styles.title}>
+        <h1 className={"title"}>
           Transforme seu <br />
           negócio com <br />
           <span>tecnologia</span>
         </h1>
 
-        <p className={styles.description}>
+        <p className={"description"}>
           Desenvolvemos soluções tecnológicas personalizadas para micro e
           pequenas empresas que querem crescer no mundo digital.
         </p>
