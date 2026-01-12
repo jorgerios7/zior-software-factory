@@ -6,7 +6,7 @@ import StatsItem from './StatsItem';
 
 export default function About() {
     return (
-        <section className={styles.about}>
+        <section className={"gridContainer"}>
             {/* Imagem */}
             <div className={styles.imageWrapper}>
                 <img src={heroImage} alt="Ambiente de trabalho moderno" />
@@ -14,7 +14,9 @@ export default function About() {
 
             {/* Conteúdo textual */}
             <div className={styles.content}>
-                <Badge label={"Sobre a Zior"} />
+                <div>
+                    <Badge label={"Sobre a Zior"} />
+                </div>
 
                 <h1 className={"title"}>
                     Tecnologia que impulsiona<br />
@@ -50,13 +52,13 @@ export default function About() {
                 <div className={styles.line} />
 
                 <div className={styles.companyStats}>
-                    <StatsItem value={"50+"} label={"Projetos Entregues"}/>
+                    <StatsItem value={"50+"} label={"Projetos Entregues"} />
 
-                    <StatsItem value={"98%"} label={"Clientes Satisfeitos"}/>
+                    <StatsItem value={"98%"} label={"Clientes Satisfeitos"} />
 
-                    <StatsItem value={"5+"} label={"Anos de Experiência"}/>
+                    <StatsItem value={"5+"} label={"Anos de Experiência"} />
 
-                    <StatsItem value={"24/7"} label={"Suporte Disponível"}/>
+                    <StatsItem value={"24/7"} label={"Suporte Disponível"} />
                 </div>
             </div>
         </section>

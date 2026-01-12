@@ -5,7 +5,7 @@ import { Smartphone, Code, Cloud, BriefcaseBusiness, Shield, Headset } from "luc
 
 export default function Features() {
     return (
-        <section className={styles.features}>
+        <section className={"columnContainer"}>
 
             <div className={styles.header}>
 

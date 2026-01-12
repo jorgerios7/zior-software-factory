@@ -1,34 +1,8 @@
-.about {
-    width: 100%;
-    min-height: calc(100vh - 20px);
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 48px 24px;
-    gap: 64px;
-
-    background: radial-gradient(circle at left,
-            rgba(0, 224, 255, 0.08),
-            transparent 40%),
-        linear-gradient(400deg, #000001 0%, #050b17 100%);
-
-    box-sizing: border-box;
-}
-
 /* Texto */
 .content {
-    max-width: 660px;
-    gap: 10px
-}
-
-.title {
-    font-size: 56px;
-    font-weight: 600;
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
 }
 
 /* Imagem */

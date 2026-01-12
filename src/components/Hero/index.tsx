@@ -6,12 +6,13 @@ import Badge from '../ui/Badge';
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
-      {/* Conteúdo textual */}
+    <section className={"gridContainer"}>
       <div className={styles.content}>
-        <Badge label={"Soluções em Tecnologia"} />
+        <div>
+          <Badge label={"Soluções em Tecnologia"} />
+        </div>
 
-        <h1 className={"title"}>
+        <h1 className={styles.title}>
           Transforme seu <br />
           negócio com <br />
           <span>tecnologia</span>
