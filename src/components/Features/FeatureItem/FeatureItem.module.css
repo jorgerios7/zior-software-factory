@@ -22,12 +22,6 @@
     color: #ffffff;
 }
 
-.description {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #9ca3af;
-}
-
 .featureItem:hover {
     border-color: #00e0ff;
     transform: translateY(-4px);

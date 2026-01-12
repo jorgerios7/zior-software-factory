@@ -18,7 +18,7 @@ export default function FeatureItem({ title, description, icon }: Props) {
                 {title}
             </h1>
 
-            <p className={styles.description}>
+            <p className={"secondaryDescription"}>
                 {description}
             </p>
 

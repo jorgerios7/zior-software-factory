@@ -17,7 +17,7 @@ export default function Hero() {
           <span>tecnologia</span>
         </h1>
 
-        <p className={"description"}>
+        <p className={"primaryDescription"}>
           Desenvolvemos soluções tecnológicas personalizadas para micro e
           pequenas empresas que querem crescer no mundo digital.
         </p>

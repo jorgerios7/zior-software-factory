@@ -16,7 +16,7 @@ export default function Features() {
                     empresa <br />
                 </h1>
 
-                <p className={"description"}>
+                <p className={"paimaryDescription"}>
                     Oferecemos serviços de tecnologia personalizados para impulsionar o crescimento do<br />
                     seu negócio.<br />
                 </p>
