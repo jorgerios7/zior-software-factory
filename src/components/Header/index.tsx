@@ -1,5 +1,6 @@
 import HighlightButton from '../ui/HighlightButton';
 import styles from './Header.module.css';
+import ziorLogo from "../../assets/images/zior-logo.png";
 
 export default function Header() {
   return (
@@ -7,7 +8,7 @@ export default function Header() {
       <div className={styles.header}>
         {/* Logo */}
         <div className={styles.logo}>
-          <span>Z</span>
+          <img src={ziorLogo} alt="Logomarca da empresa" />
         </div>
 
         {/* Buttons */}
@@ -18,7 +19,6 @@ export default function Header() {
             <button>Início</button>
             <button>Serviços</button>
             <button>Sobre</button>
-            <button>Contato</button>
           </nav>
 
           {/* CTA */}
