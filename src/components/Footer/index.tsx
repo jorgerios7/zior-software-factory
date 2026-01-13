@@ -1,7 +1,9 @@
 export default function Footer() {
     return (
-        <header>
-            
-        </header>
+        <section className={"main bg-main"}>
+            <div className={"containerMain"}>
+                
+            </div>
+        </section>
     )
 }

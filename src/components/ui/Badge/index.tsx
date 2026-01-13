@@ -1,9 +1,11 @@
 import styles from './Badge.module.css';
 
-export default function Badge({label}: {label: string}) {
+export default function Badge({ label }: { label: string }) {
     return (
-        <span className={styles.badge}>
-            {label}
-        </span>
+        <div>
+            <span className={styles.badge}>
+                {label}
+            </span>
+        </div>
     );
 }

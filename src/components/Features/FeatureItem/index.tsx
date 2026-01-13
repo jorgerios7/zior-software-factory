@@ -8,20 +8,20 @@ type Props = {
 
 export default function FeatureItem({ title, description, icon }: Props) {
     return (
-        <section className={styles.featureItem}>
+        <section className={`${styles.featureItem} bg-container bd-color`}>
 
-            <div className={styles.iconWrapper}>
+            <div className={"iconWrapper"}>
                 {icon}
             </div>
 
-            <h1 className={styles.title}>
+            <h1 className={"title text-md text-white"}>
                 {title}
-            </h1>
+            </h1> 
 
-            <p className={"secondaryDescription"}>
+            <p className={"description text-sm text-muted"}>
                 {description}
             </p>
 
-        </section>
+        </section> 
     );
 }

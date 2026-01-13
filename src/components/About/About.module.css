@@ -33,7 +33,7 @@
 
 .companyStats {
     justify-items: center;
-    margin: 20px 0 20px 0;
+    margin: 21px 0 21px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }

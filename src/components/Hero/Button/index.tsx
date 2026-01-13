@@ -8,10 +8,10 @@ type Props = {
 export default function Button({ name, onClick }: Props) {
     return (
         <button
-            className={styles.button}
+            className={`${styles.button} text-sm color-primary`}
             onClick={onClick}
         >
             {name}
         </button>
     );
-}
+} 

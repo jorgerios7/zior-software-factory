@@ -1,0 +1,47 @@
+.contact {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 21px 
+}
+
+.gridView {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.leftColumn { 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .gridView {
+        grid-template-columns: 1fr;
+    }
+
+    .leftColumn {
+        order: 2;
+    }
+
+    .sendMessage {
+        order: 1;
+    }
+}
+
+.imageWrapper {
+  max-width: 720px;
+  width: 100%;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+}

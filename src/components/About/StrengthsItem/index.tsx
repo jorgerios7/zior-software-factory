@@ -5,11 +5,11 @@ export default function StrengthsItem({ description }: { description: string; })
     return (
         <section className={styles.strengthsItem}>
             <div className={styles.iconWrapper}>
-                <CircleCheckBig size={24} color={"#00e0ff"} />
+                <CircleCheckBig size={21} color={"#00e0ff"} />
             </div>
 
 
-            <p className={styles.description}>
+            <p className={`${styles.text} font-sm text-white `}>
                 {description}
             </p>
         </section>

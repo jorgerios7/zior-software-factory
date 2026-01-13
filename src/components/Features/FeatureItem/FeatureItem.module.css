@@ -1,41 +1,18 @@
 .featureItem {
     min-width: 360px;
     min-height: 250px;
-    background: linear-gradient(90deg,
-            #0c1a37 50%,
-            #111f41 75%,
-            #0f2144 100%);
-
-    border: 1px solid #2d416c;
+    display: flex;
+    flex-direction: column; 
+    gap: 24px;
     border-radius: 16px;
     box-sizing: border-box;
     padding: 24px;
-
     transition:
         border-color 0.3s ease,
         transform 0.3s ease;
 }
 
-.title {
-    font-size: 26px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
 .featureItem:hover {
     border-color: #00e0ff;
-    transform: translateY(-4px);
-}
-
-.iconWrapper {
-    width: 58px;
-    height: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: radial-gradient(circle at left,
-            rgba(0, 224, 255, 0.08),
-            transparent 40%),
-        linear-gradient(135deg, #00e1ffaf, #00d084b7);
+    transform: translateY(-7px);
 }

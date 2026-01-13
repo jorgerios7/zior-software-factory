@@ -1,0 +1,26 @@
+.contactItem {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-sizing: border-box;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.subItem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px
+}
+
+.containerText {
+    flex-direction: column;
+    justify-items: start;
+    align-content: center;
+}

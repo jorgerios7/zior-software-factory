@@ -1,0 +1,54 @@
+.sendMessage {  
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #9fb3c8;
+}
+
+.field input,
+.field textarea {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #050b17, #000001);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #6b7c93;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: #00e0ff;
+    box-shadow: 0 0 0 1px rgba(0, 224, 255, 0.25);
+}
+
+.field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.icon {
+    font-size: 14px;
+}
