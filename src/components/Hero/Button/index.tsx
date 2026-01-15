@@ -8,7 +8,7 @@ type Props = {
 export default function Button({ name, onClick }: Props) {
     return (
         <button
-            className={`${styles.button} text-sm color-primary`}
+            className={`${styles.button} text-esm color-primary`}
             onClick={onClick}
         >
             {name}

@@ -48,7 +48,7 @@ export default function About() {
                         <StrengthsItem description={"Tecnologias modernas e atualizadas"} />
                     </div>
 
-                    <div className={styles.line} />
+                    <div className={"line"} />
 
                     <div className={styles.companyStats}>
                         <StatsItem value={"50+"} label={"Projetos Entregues"} />

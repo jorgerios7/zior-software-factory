@@ -1,48 +1,70 @@
 :root {
-    /* Font sizes */
-    --font-xs: 14px;
-    --font-sm: 16px;
-    --font-md: 21px;
-    --font-emd: 28px;
-    --font-lg: 42px;
-    --font-elg: 70px;
+  /* Font sizes */
+  --font-xs: 14px;
+  --font-esm: 17px;
+  --font-sm: 18px;
+  --font-md: 21px;
+  --font-emd: 28px;
+  --font-lg: 42px;
+  --font-elg: 70px;
 
-    /* Line heights */
-    --lh-xs: 1.4;
-    --lh-sm: 1.5;
-    --lh-md: 1.6;
-    --lh-emd: 1.4;
-    --lh-lg: 1.2;
-    --lh-elg: 1.1;
+  /* Line heights (reorganizados) */
+  --lh-xs: 1.6;
+  --lh-esm: 1.55;
+  --lh-sm: 1.5;
+  --lh-md: 1.45;
+  --lh-emd: 1.35;
+  --lh-lg: 1.2;
+  --lh-elg: 1.1;
+
+  /* Font Weight */
+  --fw-xs: 350;
+  --fw-esm: 400;
+  --fw-sm: 500;
+  --fw-md: 400;
+  --fw-emd: 400;
+  --fw-lg: 500;
+  --fw-elg: 600;
 }
-
 
 .text-xs {
     font-size: var(--font-xs);
     line-height: var(--lh-xs);
+    font-weight: var(--fw-xs);
 }
 
 .text-sm {
     font-size: var(--font-sm);
     line-height: var(--lh-sm);
+    font-weight: var(--fw-sm);
+}
+
+.text-esm {
+    font-size: var(--font-esm);
+    line-height: var(--lh-esm);
+    font-weight: var(--fw-esm);
 }
 
 .text-md {
     font-size: var(--font-md);
     line-height: var(--lh-md);
+    font-weight: var(--fw-md);
 }
 
 .text-emd {
     font-size: var(--font-emd);
     line-height: var(--lh-emd);
+    font-weight: var(--fw-emd);
 }
 
 .text-lg {
     font-size: var(--font-lg);
     line-height: var(--lh-lg);
+    font-weight: var(--fw-lg);
 }
 
 .text-elg {
     font-size: var(--font-elg);
     line-height: var(--lh-elg);
+    font-weight: var(--fw-elg);
 }

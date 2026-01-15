@@ -37,7 +37,7 @@ export default function ContactInfo({ title, email, phone, address }: Props) {
                         <p className="description text-xs text-muted">
                             {label}
                         </p>
-                        <p className="description text-sm text-white">
+                        <p className="description text-esm text-white">
                             {value}
                         </p>
                     </div>

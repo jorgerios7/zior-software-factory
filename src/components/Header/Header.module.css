@@ -27,12 +27,6 @@
   object-fit: contain;
 }
 
-/* Menu */
-.nav {
-  display: flex;
-  gap: 24px;
-}
-
 .buttonContainer {
   display: flex;
   flex-direction: row;
@@ -40,7 +34,13 @@
   gap: 24px;
 }
 
-.nav button {
+.navRow {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.navRow button {
   background: none;
   border: none;
   color: #d1d5db;
@@ -48,6 +48,11 @@
   cursor: pointer;
 }
 
-.nav button:hover {
-  color: #ffffff;
+.navRow button:hover {
+  color: #8fcac6;
+}
+
+.navRow button:focus,
+.navRow button:active {
+  outline: none;
 }

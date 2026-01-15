@@ -9,7 +9,7 @@ export default function SendMessage() {
                 <input
                     type="text"
                     placeholder="Seu nome"
-                    required
+                    required 
                 />
             </div>
 
@@ -26,7 +26,7 @@ export default function SendMessage() {
                 <label>Telefone</label>
                 <input
                     type="tel"
-                    placeholder="(11) 99999-9999"
+                    placeholder="(00) 00000-0000"
                 />
             </div>
 

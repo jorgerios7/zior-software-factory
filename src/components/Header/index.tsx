@@ -15,7 +15,7 @@ export default function Header() {
         <div className={styles.buttonContainer}>
 
           {/* Menu */}
-          <nav className={styles.nav}>
+          <nav className={styles.navRow}>
             <button>Início</button>
             <button>Serviços</button>
             <button>Sobre</button>

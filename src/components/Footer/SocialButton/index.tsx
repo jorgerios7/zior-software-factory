@@ -1,10 +1,10 @@
 import styles from './SocialButton.module.css';
 
-export default function SocialButton({ icon }: { icon: React.ReactNode; }) {
+export default function SocialButton({ icon }: { icon: string; }) {
     return (
         <div className={styles.socialButton}>
-            <div className="iconWrapper">
-                {icon}
+            <div className={styles.logo}>
+                <img src={icon} alt="Logomarca da empresa" />
             </div>
         </div>
     );

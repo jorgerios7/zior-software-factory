@@ -6,6 +6,7 @@ type Props = {
 }
 
 export default function HighlightButton({ name, onClick }: Props) {
+
     return (
         <button
             className={styles.button}

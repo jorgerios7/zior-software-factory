@@ -1,23 +1,116 @@
 /* Logo */
 .logo {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
 .recyclerItem {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* horizontal */
+  gap: 21px;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 21px
+}
+
+.subContainer {
+  width: 100%;
+  height: 100%;
+  align-items: start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.navColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 14px;
+}
+
+.navColumn button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+.navColumn button:hover {
+  color: #52b0aa;
+}
+
+.navColumn button:focus,
+.navColumn button:active {
+  outline: none;
+}
+
+
+.navRow {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.navRow button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+.navRow button:hover {
+  color: #8fcac6;
+}
+
+.navRow button:focus,
+.navRow button:active {
+  outline: none;
+}
+
+.justifyText {
+  text-align: center;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.itemGap {
+  width: 100%;
+  gap: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLegal {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
