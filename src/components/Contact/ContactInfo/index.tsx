@@ -22,8 +22,8 @@ export default function ContactInfo({ title, email, phone, address }: Props) {
     ];
 
     return (
-        <section className={`${styles.contactItem} bg-container bd-color`}>
-            <h1 className="description text-white text-md">
+        <section className={`${styles.contactItem} color-card-bg color-bd-main`}>
+            <h1 className="description color-txt-main text-md">
                 {title}
             </h1>
 
@@ -34,10 +34,10 @@ export default function ContactInfo({ title, email, phone, address }: Props) {
                     </div>
 
                     <div className={styles.containerText}>
-                        <p className="description text-xs text-muted">
+                        <p className="description text-xs color-txt-sec">
                             {label}
                         </p>
-                        <p className="description text-esm text-white">
+                        <p className="description text-esm color-txt-main">
                             {value}
                         </p>
                     </div>

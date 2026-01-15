@@ -12,7 +12,7 @@
         radial-gradient(circle at left,
             rgba(0, 224, 255, 0.08),
             transparent 40%),
-        linear-gradient(135deg, #00e0ff, #00d084);
+        linear-gradient(135deg, var(--color-highlight-main), var(--color-highlight-sec));
 
     -webkit-background-clip: text;
     background-clip: text;

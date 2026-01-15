@@ -4,6 +4,10 @@
     gap: 42px;
 }
 
+.paddingTop {
+  padding: 70px 0 0 0;
+}
+
 /* Botões */
 .actions {
   display: grid;

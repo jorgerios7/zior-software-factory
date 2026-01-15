@@ -6,20 +6,20 @@ import Badge from '../ui/Badge';
 
 export default function Hero() {
   return (
-    <section className={"main bg-primary"}>
+    <section className={`${styles.paddingTop} main bg-main-gradient`}>
       <div className={"containerMain gridMode"}>
 
         <div className={styles.content}>
 
           <Badge label={"Soluções em Tecnologia"} />
 
-          <h1 className={"title color-text-primary text-elg"}>
+          <h1 className={"title color-txt-main text-elg"}>
             Transforme seu <br />
             negócio com <br />
             <span>tecnologia</span>
           </h1>
 
-          <p className={"description text-muted text-md"}>
+          <p className={"description color-txt-sec text-md"}>
             Desenvolvemos soluções tecnológicas personalizadas para micro e
             pequenas empresas que querem crescer no mundo digital.
           </p>

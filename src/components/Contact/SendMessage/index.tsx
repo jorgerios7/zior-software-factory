@@ -3,7 +3,7 @@ import styles from './SendMessage.module.css';
 
 export default function SendMessage() {
     return (
-        <form className={`${styles.sendMessage} bg-container bd-color`}>
+        <form className={`${styles.sendMessage} color-card-bg color-bd-main`}>
             <div className={styles.field}>
                 <label>Nome completo *</label>
                 <input

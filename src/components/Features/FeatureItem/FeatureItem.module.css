@@ -1,18 +1,60 @@
 .featureItem {
-    min-width: 360px;
-    min-height: 250px;
-    display: flex;
-    flex-direction: column; 
-    gap: 24px;
-    border-radius: 16px;
-    box-sizing: border-box;
-    padding: 24px;
-    transition:
-        border-color 0.3s ease,
-        transform 0.3s ease;
+  position: relative;
+  min-width: 340px;
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  padding: 21px;
+  border-radius: 14px;
+  box-sizing: border-box;
+
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-primary);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* camada da borda gradiente */
+.featureItem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .featureItem:hover {
-    border-color: #00e0ff;
-    transform: translateY(-7px);
+  transform: translateY(-7px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(
+    135deg,
+    var(--color-energy-sec) 0%,
+    var(--color-energy-main) 50%,
+    var(--color-energy-ter) 100% 
+  );  
+}
+
+.featureItem:hover::before {
+  opacity: 1;
+}
+
+.textSec {
+  color: var(--color-txt-sec);
+  transition: color 0.25s ease;
+}
+
+.featureItem:hover .textSec {
+  color: var(--color-txt-main);
 }

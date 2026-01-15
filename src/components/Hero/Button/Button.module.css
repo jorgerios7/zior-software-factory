@@ -3,12 +3,17 @@
   border-radius: 999px;
 
   background: transparent;
-  border: 2px solid #0091ffe2;
+  border: 2px solid var(--color-highlight-main);
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.5s ease;
 }
 
 .button:hover {
-  background: #0091ffe2;
+  background: var(--color-highlight-main);
   color: #fefefe;
+}
+
+.button:focus,
+.button:active {
+  outline: none;
 }

@@ -6,15 +6,15 @@ import SendMessage from './SendMessage';
 
 export default function Contact() {
     return (
-        <section className={"main bg-primary"}>
+        <section className={"main color-bg-gradient"}>
             <div className={"containerMain columnMode"}>
                 <div className={styles.contact}>
                     <Badge label={"Fale Conosco"} />
-                    <h1 className={"title text-lg text-white"}>
+                    <h1 className={"title text-lg color-txt-main"}>
                         Vamos conversar sobre seu <br />
                         projeto? <br />
                     </h1>
-                    <p className={"description text-md text-muted"}>
+                    <p className={"description text-md color-txt-sec"}>
                         Entre em contato e descubra como podemos transformar suas ideias em realidade.<br />
                     </p>
                 </div>

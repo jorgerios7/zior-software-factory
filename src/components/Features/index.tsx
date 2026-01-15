@@ -5,17 +5,17 @@ import { Smartphone, Code, Cloud, BriefcaseBusiness, Shield, Headset } from "luc
 
 export default function Features() {
     return (
-        <section className={"main bg-primary"}>
+        <section className={"main color-bg-gradient"}>
             <div className={"containerMain columnMode"}>
 
                 <div className={styles.header}>
                     <Badge label={"O que fazemos"} />
 
-                    <h1 className={"title text-lg text-white"}>
+                    <h1 className={"title text-lg color-txt-main"}>
                         Soluções completas para sua empresa <br />
                     </h1>
 
-                    <p className={"description text-md text-muted"}>
+                    <p className={"description text-md color-txt-sec"}>
                         Oferecemos serviços de tecnologia personalizados
                         para impulsionar o crescimento do seu negócio<br />
 

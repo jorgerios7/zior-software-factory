@@ -6,7 +6,7 @@ import StatsItem from './StatsItem';
 
 export default function About() {
     return (
-        <section className={"main bg-primary"}>
+        <section className={"main bg-main-gradient"}>
             <div className={"containerMain gridMode"}>
                 {/* Imagem */}
                 <div className={styles.imageWrapper}>
@@ -17,17 +17,17 @@ export default function About() {
                 <div className={styles.content}>
                     <Badge label={"Sobre a Zior"} />
 
-                    <h1 className={"title text-lg text-white"}>
+                    <h1 className={"title text-lg color-txt-main"}>
                         Tecnologia que impulsiona<br />
                         resultados<br />
                     </h1>
 
-                    <p className={"description text-md text-muted"}>
+                    <p className={"description text-md color-txt-sec"}>
                         A Zior é especializada em desenvolver soluções tecnológicas para
                         micro e pequenas empresas que desejam se destacar no mercado digital.
                     </p>
 
-                    <p className={"description text-sm text-muted"}>
+                    <p className={"description text-sm color-txt-sec"}>
                         Nossa missão é tornar a tecnologia acessível e eficiente,
                         oferecendo serviços de qualidade com atendimento personalizado.
                         Acreditamos que toda empresa, independente do tamanho,

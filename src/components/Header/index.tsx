@@ -1,6 +1,6 @@
 import HighlightButton from '../ui/HighlightButton';
 import styles from './Header.module.css';
-import ziorLogo from "../../assets/images/zior-logo.png";
+import ziorLogo from "../../assets/images/zior_tecnologia-logo2.png";
 
 export default function Header() {
   return (

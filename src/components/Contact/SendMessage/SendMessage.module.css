@@ -1,10 +1,10 @@
 .sendMessage {  
-    border-radius: 16px;
+    border-radius: 14px;
     box-sizing: border-box;
-    padding: 24px;
+    padding: 21px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 21px;
     transition:
         border-color 0.3s ease,
         transform 0.3s ease;
@@ -19,29 +19,29 @@
 .field label {
     font-size: 14px;
     font-weight: 600;
-    color: #9fb3c8;
+    color: var(--color-txt-sec);
 }
 
 .field input,
 .field textarea {
-    padding: 14px 16px;
-    border-radius: 12px;
-    background: linear-gradient(180deg, #050b17, #000001);
+    padding: 14px 21px;
+    border-radius: 14px;
+    background: var(--color-bg-sec);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #ffffff;
+    color: var(--color-txt-main);
     font-size: 14px;
     outline: none;
 }
 
 .field input::placeholder,
 .field textarea::placeholder {
-    color: #6b7c93;
+    color: var(--color-txt-sec);
 }
 
 .field input:focus,
 .field textarea:focus {
-    border-color: #00e0ff;
-    box-shadow: 0 0 0 1px rgba(0, 224, 255, 0.25);
+    border-color: var(--color-highlight-sec);
+    box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 .field textarea {

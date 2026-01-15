@@ -1,5 +1,109 @@
+:root {
+    /* ===== Colors ===== */
+    --color-primary: 60, 96, 180;
+
+    --color-bg-main: #000000;
+    --color-bg-sec: #0d1117;
+
+    --color-txt-main: #ffffff;
+    --color-txt-sec: #9ca3af;
+
+    --color-highlight-main: #1F6AE1;
+    --color-highlight-sec: #4DA3FF;
+
+    --color-energy-main: #F59E0B;
+    --color-energy-sec: #D97706;
+    --color-energy-ter: #FDBA2D;
+
+    --color-bt-main: #1F6AE1;
+    --color-bt-cta: #F59E0B;
+
+    --color-card-bg: #1C2740;
+
+    --bg-header: rgba(11, 15, 20, 0.75);
+
+    --bg-main-gradient:
+        linear-gradient(135deg,
+            #000000 0%,
+            #0d1117 50%,
+            #1A2230 100%);
+
+    --bg-sec-gradient: linear-gradient(135deg,
+            #0E131A 0%,
+            #141A22 50%,
+            #1C2740 100%);
+}
+
+.color-bg-main {
+    background: var(--color-bg-main);
+}
+
+.color-bg-gradient {
+    background: var(--bg-sec-gradient);
+}
+
+.bg-main-gradient {
+    background: var(--bg-main-gradient);
+}
+
+.color-bg-sec {
+    background: var(--color-bg-sec);
+}
+
+.color-txt-main {
+    color: var(--color-txt-main);
+}
+
+.color-txt-sec {
+    color: var(--color-txt-sec);
+}
+
+.color-highlight-main {
+    color: var(--color-highlight-main);
+}
+
+.color-highlight-sec {
+    color: var(--color-highlight-sec);
+}
+
+.color-energy-main {
+    color: var(--color-energy-main);
+}
+
+.color-energy-sec {
+    color: var(--color-energy-sec);
+}
+
+.color-energy-ter {
+    color: var(--color-energy-ter);
+}
+
+.color-bt-main {
+    color: var(--color-bt-main);
+}
+
+.color-bt-cta {
+    color: var(--color-bt-cta);
+}
+
+.color-card-bg {
+    background: var(--color-card-bg);
+}
+
+.color-bd-main {
+    border: 1px solid rgba(var(--color-primary), 0.4);
+}
+
+
+
+
+
+
+
+
+
 .color-primary {
-    color: #00e0ff
+    color: #00e0ff;
 }
 
 .text-muted {

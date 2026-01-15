@@ -1,7 +1,9 @@
-import ziorLogo from "../../assets/images/zior-logo.png";
+import zior_tecnologiaLogo from "../../assets/images/zior_tecnologia-logo.png";
 import instagramLogo from "../../assets/images/instagram-logo.png";
 import linkedinLogo from "../../assets/images/linkedin-logo.png";
 import whatsappLogo from "../../assets/images/whatsapp-logo.png";
+import facebookLogo from "../../assets/images/facebook-logo.png";
+import xLogo from "../../assets/images/x-logo.png";
 import styles from './Footer.module.css';
 import SocialButton from "./SocialButton";
 
@@ -10,7 +12,8 @@ export default function Footer() {
         { icon: instagramLogo, label: "Instagram" },
         { icon: linkedinLogo, label: "Linkedin" },
         { icon: whatsappLogo, label: "Whatsapp" },
-        
+        { icon: xLogo, label: "X" },
+        { icon: facebookLogo, label: "Facebook" },
     ];
 
     const services = [
@@ -37,7 +40,7 @@ export default function Footer() {
     }) {
         return (
             <div className={styles.subContainer}>
-                <h2 className="description text-sm text-white">{title}</h2>
+                <h2 className="description text-sm color-txt-main">{title}</h2>
                 <nav className={styles.navColumn}>
                     {items.map((item) => (
                         <button key={item} className={styles.navLink}>
@@ -50,17 +53,17 @@ export default function Footer() {
     }
 
     return (
-        <section className={"main bg-main"}>
+        <section className={"color-bg-main"}>
             <div className={"line"} />
 
             <div className={`containerMain ${styles.itemGap}`}>
                 <div className={styles.grid}>
                     <div className={styles.subContainer}>
                         <div className={styles.logo}>
-                            <img src={ziorLogo} alt="Logomarca da empresa" />
+                            <img src={zior_tecnologiaLogo} alt="Logomarca da empresa" />
                         </div>
 
-                        <p className={`${styles.centerText} text-xs text-muted`}>
+                        <p className={`${styles.centerText} text-xs color-bg-main`}>
                             Transformando ideias em soluções tecnológicas
                             para micro e pequenas empresas.
                         </p>
@@ -76,22 +79,22 @@ export default function Footer() {
                     <NavSection title="Empresa" items={company} />
 
                     <div className={styles.subContainer}>
-                        <h2 className={"description text-sm text-white"}>
+                        <h2 className={"description text-sm color-txt-main"}>
                             Contato
                         </h2>
                         <div className={styles.navColumn}>
-                            <p className={"description text-xs text-muted"}>contato@zior.com.br</p>
-                            <p className={"description text-xs text-muted"}>(11) 99999-9999</p>
-                            <p className={"description text-xs text-muted"}>São Paulo, SP</p>
-                            <p className={"description text-xs text-muted"}>Brasil</p>
+                            <p className={"description text-xs color-txt-sec"}>contato@zior.com.br</p>
+                            <p className={"description text-xs color-txt-sec"}>(11) 99999-9999</p>
+                            <p className={"description text-xs color-txt-sec"}>São Paulo, SP</p>
+                            <p className={"description text-xs color-txt-sec"}>Brasil</p>
                         </div>
                     </div>
                 </div>
 
                 <div className={"line"} />
 
-                <div className={styles.footeregal}>
-                    <h1 className={"description text-xs text-muted"}>
+                <div className={styles.footerLegal}>
+                    <h1 className={"description text-xs color-txt-sec"}>
                         © 2026 Zior. Todos os direitos reservados.
                     </h1>
 

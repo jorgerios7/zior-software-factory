@@ -12,7 +12,7 @@ export default function StatsItem({ value, label }: Props) {
                 {value}
             </p>
 
-            <p className={"description text-xs text-muted"}>
+            <p className={"description text-xs color-txt-sec"}>
                 {label}
             </p>
         </section> 
