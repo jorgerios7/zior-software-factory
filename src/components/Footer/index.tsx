@@ -9,14 +9,15 @@ import SocialButton from "./SocialButton";
 import { TEXTS } from "../../content/texts";
 import NavSection from "./NavSection";
 import RowContacts from "./RowContacts";
+import { LINKS } from "../../content/links";
 
 export default function Footer() {
     const socialItems = [
-        { icon: instagramLogo, label: "Instagram" },
-        { icon: linkedinLogo, label: "Linkedin" },
-        { icon: whatsappLogo, label: "Whatsapp" },
-        { icon: xLogo, label: "X" },
-        { icon: facebookLogo, label: "Facebook" },
+        { icon: xLogo, url: LINKS.social.x },
+        { icon: instagramLogo, url: LINKS.social.intagram },
+        { icon: linkedinLogo, url: LINKS.social.linkedin },
+        { icon: whatsappLogo, url:LINKS.social.whatsapp },
+        { icon: facebookLogo, url: LINKS.social.facebook },
     ];
 
     return (
@@ -34,8 +35,11 @@ export default function Footer() {
                         </p>
 
                         <div className={styles.recyclerItem}>
-                            {socialItems.map(({ icon }) => (
-                                <SocialButton icon={icon} />
+                            {socialItems.map(({ icon, url }) => (
+                                <SocialButton
+                                    url={url}
+                                    icon={icon}
+                                />
                             ))}
                         </div>
                     </div>
@@ -44,7 +48,7 @@ export default function Footer() {
 
                     <NavSection list={TEXTS.footer.company} />
 
-                    <RowContacts list={TEXTS.footer.contact}/>
+                    <RowContacts list={TEXTS.footer.contact} />
                 </div>
 
                 <div className={"line"} />
