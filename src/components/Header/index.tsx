@@ -1,6 +1,7 @@
 import HighlightButton from '../ui/HighlightButton';
 import styles from './Header.module.css';
 import ziorLogo from "../../assets/images/zior_tecnologia-logo2.png";
+import { TEXTS } from '../../content/texts';
 
 export default function Header() {
   return (
@@ -16,14 +17,14 @@ export default function Header() {
 
           {/* Menu */}
           <nav className={styles.navRow}>
-            <button>Início</button>
-            <button>Serviços</button>
-            <button>Sobre</button>
+            <button>{TEXTS.header.bt_hero}</button>
+            <button>{TEXTS.header.bt_features}</button>
+            <button>{TEXTS.header.bt_about}</button>
           </nav>
 
           {/* CTA */}
           <HighlightButton
-            name={"Fale Conosco"}
+            name={TEXTS.header.cta}
             onClick={() => console.log("Fale conosco foi clicado!")}
           />
         </div>

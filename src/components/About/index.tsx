@@ -1,8 +1,9 @@
 import styles from './About.module.css';
 import heroImage from "../../assets/images/about-image.png";
 import Badge from '../ui/Badge';
-import StrengthsItem from './StrengthsItem';
-import StatsItem from './StatsItem';
+import Strengths from './Strengths';
+import CompanyStats from './CompanyStats';
+import { TEXTS } from '../../content/texts';
 
 export default function About() {
     return (
@@ -15,50 +16,27 @@ export default function About() {
 
                 {/* Conteúdo textual */}
                 <div className={styles.content}>
-                    <Badge label={"Sobre a Zior"} />
+                    <Badge label={TEXTS.about.badge} />
 
                     <h1 className={"title text-lg color-txt-main"}>
-                        Tecnologia que impulsiona<br />
-                        resultados<br />
+                        {TEXTS.about.title.a}<br />
+                        {TEXTS.about.title.b}<br />
                     </h1>
 
                     <p className={"description text-md color-txt-sec"}>
-                        A Zior é especializada em desenvolver soluções tecnológicas para
-                        micro e pequenas empresas que desejam se destacar no mercado digital.
+                        {TEXTS.about.desc}
                     </p>
 
                     <p className={"description text-sm color-txt-sec"}>
-                        Nossa missão é tornar a tecnologia acessível e eficiente,
-                        oferecendo serviços de qualidade com atendimento personalizado.
-                        Acreditamos que toda empresa, independente do tamanho,
-                        merece ter acesso às melhores ferramentas digitais.
+                        {TEXTS.about.subDesc}
                     </p>
-
-                    <div className={styles.listView}>
-                        <StrengthsItem description={"Soluções personalizadas para cada negócio"} />
-
-                        <StrengthsItem description={"Prazos de entrega respeitados"} />
-
-                        <StrengthsItem description={"Suporte técnico contínuo"} />
-
-                        <StrengthsItem description={"Equipe especializada e certificada"} />
-
-                        <StrengthsItem description={"Preços justos e transparentes"} />
-
-                        <StrengthsItem description={"Tecnologias modernas e atualizadas"} />
-                    </div>
+                    
+                    <Strengths desc={TEXTS.about.strengths} />
 
                     <div className={"line"} />
 
-                    <div className={styles.companyStats}>
-                        <StatsItem value={"50+"} label={"Projetos Entregues"} />
-
-                        <StatsItem value={"98%"} label={"Clientes Satisfeitos"} />
-
-                        <StatsItem value={"5+"} label={"Anos de Experiência"} />
-
-                        <StatsItem value={"24/7"} label={"Suporte Disponível"} />
-                    </div>
+                    <CompanyStats list={TEXTS.about.stats} />
+                    
                 </div>
             </div>
         </section>

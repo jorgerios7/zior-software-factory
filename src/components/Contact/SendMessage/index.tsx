@@ -1,44 +1,37 @@
+import { TEXTS } from '../../../content/texts';
 import HighlightButton from '../../ui/HighlightButton';
 import styles from './SendMessage.module.css';
 
-export default function SendMessage() {
+type ContactForm = {
+    label: string;
+    placeHolder: string;
+    type: string;
+}
+
+type Props = {
+    contact: ContactForm[];
+}
+
+export default function SendMessage({ contact }: Props) {
     return (
         <form className={`${styles.sendMessage} color-card-bg color-bd-main`}>
-            <div className={styles.field}>
-                <label>Nome completo *</label>
-                <input
-                    type="text"
-                    placeholder="Seu nome"
-                    required 
-                />
-            </div>
 
-            <div className={styles.field}>
-                <label>Email *</label>
-                <input
-                    type="email"
-                    placeholder="seu@email.com"
-                    required
-                />
-            </div>
 
-            <div className={styles.field}>
-                <label>Telefone</label>
-                <input
-                    type="tel"
-                    placeholder="(00) 00000-0000"
-                />
-            </div>
+            {contact.map(({ label, placeHolder, type }) => {
 
-            <div className={styles.field}>
-                <label>Mensagem *</label>
-                <textarea
-                    placeholder="Conte-nos sobre seu projeto..."
-                    required
-                />
-            </div>
+                return (
+                    <div className={styles.field}>
+                        <label>{label}</label>
+                        <input
+                            type={type}
+                            placeholder={placeHolder}
+                            required
+                        />
+                    </div>
+                )
+            })}
 
-            <HighlightButton name='Enviar Mensagem' onClick={() => console.log("asvasdvasdv")}/>
+            <HighlightButton name={TEXTS.contact.cta} onClick={() => console.log("asvasdvasdv")} />
         </form>
     );
 }

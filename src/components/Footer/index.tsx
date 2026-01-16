@@ -6,6 +6,9 @@ import facebookLogo from "../../assets/images/facebook-logo.png";
 import xLogo from "../../assets/images/x-logo.png";
 import styles from './Footer.module.css';
 import SocialButton from "./SocialButton";
+import { TEXTS } from "../../content/texts";
+import NavSection from "./NavSection";
+import RowContacts from "./RowContacts";
 
 export default function Footer() {
     const socialItems = [
@@ -16,45 +19,8 @@ export default function Footer() {
         { icon: facebookLogo, label: "Facebook" },
     ];
 
-    const services = [
-        "Desenvolvimento Web",
-        "Aplicativos Mobile",
-        "Cloud Computing",
-        "Business Intelligence",
-        "Segurança Digital",
-    ];
-
-    const company = [
-        "Sobre Nós",
-        "Portfólio",
-        "Blog",
-        "Carreiras"
-    ];
-
-    function NavSection({
-        title,
-        items,
-    }: {
-        title: string;
-        items: string[];
-    }) {
-        return (
-            <div className={styles.subContainer}>
-                <h2 className="description text-sm color-txt-main">{title}</h2>
-                <nav className={styles.navColumn}>
-                    {items.map((item) => (
-                        <button key={item} className={styles.navLink}>
-                            {item}
-                        </button>
-                    ))}
-                </nav>
-            </div>
-        );
-    }
-
     return (
-        <section className={"color-bg-main"}>
-            <div className={"line"} />
+        <section className={"main color-bg-main"}>
 
             <div className={`containerMain ${styles.itemGap}`}>
                 <div className={styles.grid}>
@@ -63,9 +29,8 @@ export default function Footer() {
                             <img src={zior_tecnologiaLogo} alt="Logomarca da empresa" />
                         </div>
 
-                        <p className={`${styles.centerText} text-xs color-bg-main`}>
-                            Transformando ideias em soluções tecnológicas
-                            para micro e pequenas empresas.
+                        <p className={`${styles.text} text-xs color-bg-main`}>
+                            {TEXTS.footer.desc}
                         </p>
 
                         <div className={styles.recyclerItem}>
@@ -75,32 +40,23 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <NavSection title="Serviços" items={services} />
-                    <NavSection title="Empresa" items={company} />
+                    <NavSection list={TEXTS.footer.features} />
 
-                    <div className={styles.subContainer}>
-                        <h2 className={"description text-sm color-txt-main"}>
-                            Contato
-                        </h2>
-                        <div className={styles.navColumn}>
-                            <p className={"description text-xs color-txt-sec"}>contato@zior.com.br</p>
-                            <p className={"description text-xs color-txt-sec"}>(11) 99999-9999</p>
-                            <p className={"description text-xs color-txt-sec"}>São Paulo, SP</p>
-                            <p className={"description text-xs color-txt-sec"}>Brasil</p>
-                        </div>
-                    </div>
+                    <NavSection list={TEXTS.footer.company} />
+
+                    <RowContacts list={TEXTS.footer.contact}/>
                 </div>
 
                 <div className={"line"} />
 
                 <div className={styles.footerLegal}>
                     <h1 className={"description text-xs color-txt-sec"}>
-                        © 2026 Zior. Todos os direitos reservados.
+                        {TEXTS.footer.rights}
                     </h1>
 
                     <div className={styles.navRow}>
-                        <button >Política de Privacidade</button>
-                        <button>Termos de Uso</button>
+                        <button>{TEXTS.footer.legal.privacyPolicy}</button>
+                        <button>{TEXTS.footer.legal.terms}</button>
                     </div>
                 </div>
 

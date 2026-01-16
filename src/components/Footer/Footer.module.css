@@ -107,6 +107,12 @@
   flex-direction: column;
 }
 
+.text {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .footerLegal {
   width: 100%;
   display: flex;

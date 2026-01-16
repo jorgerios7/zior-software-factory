@@ -7,9 +7,6 @@
     box-sizing: border-box;
     border-radius: 14px;
     box-sizing: border-box;
-    transition:
-        border-color 0.3s ease,
-        transform 0.3s ease;
 }
 
 .subItem{
@@ -17,6 +14,19 @@
     display: flex;
     flex-direction: row;
     gap: 21px
+}
+
+.iconWrapper {
+    width: 49px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: radial-gradient(circle at left,
+            rgba(0, 38, 255, 0.08),
+            transparent 40%),
+        linear-gradient(135deg, var(--color-energy-sec), var(--color-energy-ter));
 }
 
 .containerText {

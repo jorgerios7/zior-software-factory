@@ -1,5 +1,4 @@
 :root {
-    /* ===== Colors ===== */
     --color-primary: 60, 96, 180;
 
     --color-bg-main: #000000;
@@ -22,15 +21,15 @@
 
     --bg-header: rgba(11, 15, 20, 0.75);
 
-    --bg-main-gradient:
-        linear-gradient(135deg,
+    --bg-main-gradient: linear-gradient(135deg,
             #000000 0%,
-            #0d1117 50%,
-            #1A2230 100%);
+            #0D1117 45%,
+            #141A22 100%);
+
 
     --bg-sec-gradient: linear-gradient(135deg,
-            #0E131A 0%,
-            #141A22 50%,
+            #141A22 0%,
+            #181F2A 50%,
             #1C2740 100%);
 }
 
@@ -38,16 +37,16 @@
     background: var(--color-bg-main);
 }
 
-.color-bg-gradient {
-    background: var(--bg-sec-gradient);
+.color-bg-sec {
+    background: var(--color-bg-sec);
 }
 
 .bg-main-gradient {
     background: var(--bg-main-gradient);
 }
 
-.color-bg-sec {
-    background: var(--color-bg-sec);
+.color-bg-gradient {
+    background: var(--bg-sec-gradient);
 }
 
 .color-txt-main {
@@ -92,59 +91,4 @@
 
 .color-bd-main {
     border: 1px solid rgba(var(--color-primary), 0.4);
-}
-
-
-
-
-
-
-
-
-
-.color-primary {
-    color: #00e0ff;
-}
-
-.text-muted {
-    color: #9ca3af;
-}
-
-/* Neutral */
-.color-white {
-    color: #ffffff
-}
-
-.color-black {
-    color: #000000
-}
-
-.text-white {
-    color: #ffffff
-}
-
-.bg-main {
-    background: rgb(0, 0, 0);
-}
-
-.bg-primary {
-    background: radial-gradient(circle at left,
-            rgba(0, 224, 255, 0.08),
-            transparent 40%),
-        linear-gradient(400deg, #000001 0%, #050b17 100%);
-}
-
-.bg-secondary {
-    background: radial-gradient(circle at left,
-            rgba(0, 225, 255, 0.197),
-            transparent 40%),
-        linear-gradient(400deg, #0000019c 0%, #0d1b37 100%);
-}
-
-.bg-container {
-    background: rgba(42, 66, 143, 0.37);
-}
-
-.bd-color {
-    border: 1px solid rgba(0, 224, 255, 0.4);
 }

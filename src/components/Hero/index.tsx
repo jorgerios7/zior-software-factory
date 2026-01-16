@@ -3,35 +3,35 @@ import heroImage from "../../assets/images/hero-image.png";
 import HighlightButton from '../ui/HighlightButton';
 import Button from './Button';
 import Badge from '../ui/Badge';
+import { TEXTS } from '../../content/texts';
 
 export default function Hero() {
   return (
-    <section className={`${styles.paddingTop} main bg-main-gradient`}>
+    <section className={`main bg-main-gradient ${styles.paddingTop}`}>
       <div className={"containerMain gridMode"}>
 
         <div className={styles.content}>
 
-          <Badge label={"Soluções em Tecnologia"} />
+          <Badge label={TEXTS.hero.badge} />
 
           <h1 className={"title color-txt-main text-elg"}>
-            Transforme seu <br />
-            negócio com <br />
-            <span>tecnologia</span>
+            {TEXTS.hero.title.a} <br />
+            {TEXTS.hero.title.b} <br />
+            <span>{TEXTS.hero.title.c}</span>
           </h1>
 
           <p className={"description color-txt-sec text-md"}>
-            Desenvolvemos soluções tecnológicas personalizadas para micro e
-            pequenas empresas que querem crescer no mundo digital.
+            {TEXTS.hero.desc}
           </p>
 
           <div className={styles.actions}>
             <HighlightButton
-              name={"Solicitar Orçamento →"}
+              name={TEXTS.hero.bt.cta}
               onClick={() => { console.log("Orçamento solicitado!") }}
             />
 
             <Button
-              name={"Nossos Serviços"}
+              name={TEXTS.hero.bt.features}
               onClick={() => console.log("Nossos serviços foi clicado!")}
             />
           </div>
@@ -40,7 +40,7 @@ export default function Hero() {
         {/* Imagem */}
         <div className={"imageWrapper"}>
           <img src={heroImage} alt="Ambiente de trabalho moderno" />
-        </div> 
+        </div>
 
       </div>
     </section>

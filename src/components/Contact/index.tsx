@@ -1,31 +1,31 @@
 import Badge from '../ui/Badge';
 import styles from './Contact.module.css';
 import contactImage from "../../assets/images/contact-image.png";
-import ContactInfo from './ContactInfo';
+import ContactType from './ContactType';
 import SendMessage from './SendMessage';
+import { TEXTS } from '../../content/texts';
 
 export default function Contact() {
     return (
         <section className={"main color-bg-gradient"}>
             <div className={"containerMain columnMode"}>
                 <div className={styles.contact}>
-                    <Badge label={"Fale Conosco"} />
+                    <Badge label={TEXTS.contact.badge} />
                     <h1 className={"title text-lg color-txt-main"}>
-                        Vamos conversar sobre seu <br />
-                        projeto? <br />
+                        {TEXTS.contact.title.a} <br />
+                        {TEXTS.contact.title.b} <br />
                     </h1>
                     <p className={"description text-md color-txt-sec"}>
-                        Entre em contato e descubra como podemos transformar suas ideias em realidade.<br />
+                        {TEXTS.contact.desc}
                     </p>
                 </div>
 
                 <div className={styles.gridView}>
                     <div className={styles.leftColumn}>
-                        <ContactInfo
-                            title="Informações de Contato"
-                            email="contato@zior.com.br"
-                            phone="(61) 9 8243-4750"
-                            address="Santa Maria, DF - Brasil"
+                        <ContactType
+                            title={TEXTS.contact.titleType}
+                            contact={TEXTS.contact.type}
+                            
                         />
 
                         <div className={styles.imageWrapper}>
@@ -36,7 +36,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <SendMessage />
+                    <SendMessage contact={TEXTS.contact.contactForm} />
                 </div>
             </div>
         </section>

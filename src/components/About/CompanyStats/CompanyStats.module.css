@@ -1,4 +1,11 @@
-.statsItem {
+.companyStats {
+    justify-items: center;
+    margin: 21px 0 21px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
     width: 100%;
     box-sizing: border-box;
     display: flex;

@@ -1,11 +1,7 @@
-.strengthsItem {
+.strengths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 100%;
-    
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    flex-direction: row;
 }
 
 .text {
@@ -21,4 +17,12 @@
     justify-content: center;
     gap: 1px;
     margin: 0 10px 0 0;
+}
+
+.listView {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }

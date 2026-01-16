@@ -1,3 +1,4 @@
+import { TEXTS } from '../../content/texts';
 import Badge from '../ui/Badge';
 import FeatureItem from './FeatureItem';
 import styles from './Features.module.css';
@@ -9,54 +10,52 @@ export default function Features() {
             <div className={"containerMain columnMode"}>
 
                 <div className={styles.header}>
-                    <Badge label={"O que fazemos"} />
+                    <Badge label={TEXTS.features.badge} />
 
                     <h1 className={"title text-lg color-txt-main"}>
-                        Soluções completas para sua empresa <br />
+                        {TEXTS.features.title}
                     </h1>
 
                     <p className={"description text-md color-txt-sec"}>
-                        Oferecemos serviços de tecnologia personalizados
-                        para impulsionar o crescimento do seu negócio<br />
-
+                        {TEXTS.features.desc}
                     </p>
                 </div>
 
                 <div className={styles.featuresList}>
                     <FeatureItem
                         icon={<Code size={24} />}
-                        title="Desenvolvimento Web"
-                        description="Sites e sistemas web personalizados, responsivos e otimizados para seu negócio crescer online."
+                        title={TEXTS.features.services.webDevelopment.title}
+                        description={TEXTS.features.services.webDevelopment.desc}
                     />
 
                     <FeatureItem
                         icon={<Smartphone size={24} />}
-                        title="Aplicativos Mobile"
-                        description="Apps nativos e híbridos para Android e iOS, com design intuitivo e performance excepcional."
+                        title={TEXTS.features.services.mobileDevelopment.title}
+                        description={TEXTS.features.services.mobileDevelopment.desc}
                     />
 
                     <FeatureItem
                         icon={<Cloud size={30} />}
-                        title="Cloud Computing"
-                        description="Migração e gestão de infraestrutura em nuvem para maior segurança e escalabilidade."
+                        title={TEXTS.features.services.cloudComputing.title}
+                        description={TEXTS.features.services.cloudComputing.desc}
                     />
 
                     <FeatureItem
                         icon={<BriefcaseBusiness size={24} />}
-                        title="Business Intelligence"
-                        description="Análise de dados e dashboards inteligentes para tomada de decisões estratégicas."
+                        title={TEXTS.features.services.businessIntelligence.title}
+                        description={TEXTS.features.services.businessIntelligence.desc}
                     />
 
                     <FeatureItem
                         icon={<Shield size={24} />}
-                        title="Segurança Digital"
-                        description="Proteção de dados, backup automático e implementação de melhores práticas de segurança."
+                        title={TEXTS.features.services.digitalSecurity.title}
+                        description={TEXTS.features.services.digitalSecurity.desc}
                     />
 
                     <FeatureItem
                         icon={<Headset size={28} />}
-                        title="Suporte Técnico"
-                        description="Atendimento personalizado e suporte contínuo para garantir o funcionamento perfeito."
+                        title={TEXTS.features.services.technicalSupport.title}
+                        description={TEXTS.features.services.technicalSupport.desc}
                     />
                 </div>
 
