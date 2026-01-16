@@ -4,10 +4,11 @@ import HighlightButton from '../ui/HighlightButton';
 import Button from './Button';
 import Badge from '../ui/Badge';
 import { TEXTS } from '../../content/texts';
+import { forwardRef } from 'react';
 
-export default function Hero() {
+const Hero = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <section className={`main bg-main-gradient ${styles.paddingTop}`}>
+    <section ref={ref} className={`main bg-main-gradient ${styles.paddingTop}`}>
       <div className={"containerMain gridMode"}>
 
         <div className={styles.content}>
@@ -45,4 +46,7 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+})
+
+Hero.displayName = 'Hero'
+export default Hero;

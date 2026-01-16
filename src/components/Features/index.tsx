@@ -1,12 +1,13 @@
+import { forwardRef } from 'react';
 import { TEXTS } from '../../content/texts';
 import Badge from '../ui/Badge';
 import FeatureItem from './FeatureItem';
 import styles from './Features.module.css';
 import { Smartphone, Code, Cloud, BriefcaseBusiness, Shield, Headset } from "lucide-react";
 
-export default function Features() {
+const Features = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <section className={"main color-bg-gradient"}>
+        <section ref={ref} className={"main color-bg-gradient"}>
             <div className={"containerMain columnMode"}>
 
                 <div className={styles.header}>
@@ -62,4 +63,7 @@ export default function Features() {
             </div>
         </section>
     )
-}
+})
+
+Features.displayName = 'Features'
+export default Features;

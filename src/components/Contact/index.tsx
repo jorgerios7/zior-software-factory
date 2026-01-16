@@ -4,10 +4,11 @@ import contactImage from "../../assets/images/contact-image.png";
 import ContactType from './ContactType';
 import SendMessage from './SendMessage';
 import { TEXTS } from '../../content/texts';
+import { forwardRef } from 'react';
 
-export default function Contact() {
+const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <section className={"main color-bg-gradient"}>
+        <section ref={ref} className={"main color-bg-gradient"}>
             <div className={"containerMain columnMode"}>
                 <div className={styles.contact}>
                     <Badge label={TEXTS.contact.badge} />
@@ -41,4 +42,7 @@ export default function Contact() {
             </div>
         </section>
     )
-}
+})
+
+Contact.displayName = 'Contact'
+export default Contact;

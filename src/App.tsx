@@ -1,20 +1,33 @@
-import './App.css'
-import About from './components/About';
-import Contact from './components/Contact';
-import Features from './components/Features'
-import Footer from './components/Footer';
-import Header from './components/Header'
-import Hero from './components/Hero'
+import { useRef } from "react"
+import About from "./components/About"
+import Contact from "./components/Contact"
+import Features from "./components/Features"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Hero from "./components/Hero"
+import { scrollToRef } from "./utils/scrollToRef"
 
 export default function App() {
+  const heroRef = useRef<HTMLDivElement>(null)
+  const featuresRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
+
   return (
     <>
-      <Header />
-      <Hero />
-      <Features />
-      <About />
-      <Contact />
+      <Header
+        onHero={() => scrollToRef(heroRef)}
+        onFeatures={() => scrollToRef(featuresRef)}
+        onAbout={() => scrollToRef(aboutRef)}
+        onContact={() => scrollToRef(contactRef)}
+      />
+      
+      <Hero ref={heroRef} />
+      <Features ref={featuresRef} />
+      <About ref={aboutRef} />
+      <Contact ref={contactRef} />
+
       <Footer />
     </>
-  );
+  )
 }

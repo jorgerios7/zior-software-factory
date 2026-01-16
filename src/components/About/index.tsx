@@ -4,10 +4,11 @@ import Badge from '../ui/Badge';
 import Strengths from './Strengths';
 import CompanyStats from './CompanyStats';
 import { TEXTS } from '../../content/texts';
+import { forwardRef } from 'react';
 
-export default function About() {
+const About = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <section className={"main bg-main-gradient"}>
+        <section ref={ref}  className={"main bg-main-gradient"}>
             <div className={"containerMain gridMode"}>
                 {/* Imagem */}
                 <div className={styles.imageWrapper}>
@@ -41,4 +42,7 @@ export default function About() {
             </div>
         </section>
     );
-}
+})
+
+About.displayName = 'About'
+export default About;

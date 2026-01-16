@@ -6,10 +6,10 @@ export const LINKS = {
   },
 
   social: {
-    intagram: 'https://www.instagram.com/jorgerios_gtr',
-    whatsapp: 'https://wa.me/+5561982434750',
-    linkedin: 'https://www.linkedin.com/in/jorgeandraderios7-03a0728a',
-    github: 'https://github.com/jorgerios7',
-    email: 'mailto:jorgeandraderios7@gmail.com',
+    intagram: 'https://www.instagram.com/',
+    whatsapp: 'https://whatsapp.com',
+    linkedin: 'https://www.linkedin.com/',
+    facebook: 'https://www.facebook.com/',
+    x: 'https://www.x.com/',
   },
 };

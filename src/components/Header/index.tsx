@@ -3,7 +3,19 @@ import styles from './Header.module.css';
 import ziorLogo from "../../assets/images/zior_tecnologia-logo2.png";
 import { TEXTS } from '../../content/texts';
 
-export default function Header() {
+type Props = {
+  onHero: () => void;
+  onFeatures: () => void;
+  onAbout: () => void;
+  onContact: () => void;
+}
+
+export default function Header({
+  onHero,
+  onFeatures,
+  onAbout,
+  onContact
+}: Props) {
   return (
     <section className={"main"}>
       <div className={styles.header}>
@@ -17,15 +29,15 @@ export default function Header() {
 
           {/* Menu */}
           <nav className={styles.navRow}>
-            <button>{TEXTS.header.bt_hero}</button>
-            <button>{TEXTS.header.bt_features}</button>
-            <button>{TEXTS.header.bt_about}</button>
+            <button onClick={onHero}>{TEXTS.header.bt_hero}</button>
+            <button onClick={onFeatures}>{TEXTS.header.bt_features}</button>
+            <button onClick={onAbout}>{TEXTS.header.bt_about}</button>
           </nav>
 
           {/* CTA */}
           <HighlightButton
             name={TEXTS.header.cta}
-            onClick={() => console.log("Fale conosco foi clicado!")}
+            onClick={onContact}
           />
         </div>
       </div>
