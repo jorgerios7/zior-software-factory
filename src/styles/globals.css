@@ -1,5 +1,5 @@
 .main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,7 +32,7 @@
 
 .title span {
     background: linear-gradient(90deg,
-           var(--color-bt-main),
+            var(--color-bt-main),
             var(--color-bt-cta));
 
     -webkit-background-clip: text;

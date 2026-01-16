@@ -19,7 +19,7 @@ export const TEXTS = {
         desc: "Desenvolvemos soluções tecnológicas personalizadas para micro e pequenas empresas que querem crescer no mundo digital.",
         bt: {
             cta: "Solicitar Orçamento",
-            features: "Serviços"
+            features: "Nossos Serviços"
         }
     },
 

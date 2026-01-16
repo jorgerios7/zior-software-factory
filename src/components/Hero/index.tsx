@@ -6,47 +6,52 @@ import Badge from '../ui/Badge';
 import { TEXTS } from '../../content/texts';
 import { forwardRef } from 'react';
 
-const Hero = forwardRef<HTMLDivElement>((_, ref) => {
-  return (
-    <section ref={ref} className={`main bg-main-gradient ${styles.paddingTop}`}>
-      <div className={"containerMain gridMode"}>
+type Props = {
+  onContact: () => void;
+  onFeatures: () => void;
+}
 
-        <div className={styles.content}>
+const Hero = forwardRef<HTMLDivElement, Props>(({ onContact, onFeatures }, ref) => {
+    return (
+      <section ref={ref} className={`main bg-main-gradient ${styles.paddingTop}`}>
+        <div className={"containerMain gridMode"}>
 
-          <Badge label={TEXTS.hero.badge} />
+          <div className={styles.content}>
 
-          <h1 className={"title color-txt-main text-elg"}>
-            {TEXTS.hero.title.a} <br />
-            {TEXTS.hero.title.b} <br />
-            <span>{TEXTS.hero.title.c}</span>
-          </h1>
+            <Badge label={TEXTS.hero.badge} />
 
-          <p className={"description color-txt-sec text-md"}>
-            {TEXTS.hero.desc}
-          </p>
+            <h1 className={"title color-txt-main text-elg"}>
+              {TEXTS.hero.title.a} <br />
+              {TEXTS.hero.title.b} <br />
+              <span>{TEXTS.hero.title.c}</span>
+            </h1>
 
-          <div className={styles.actions}>
-            <HighlightButton
-              name={TEXTS.hero.bt.cta}
-              onClick={() => { console.log("Orçamento solicitado!") }}
-            />
+            <p className={"description color-txt-sec text-md"}>
+              {TEXTS.hero.desc}
+            </p>
 
-            <Button
-              name={TEXTS.hero.bt.features}
-              onClick={() => console.log("Nossos serviços foi clicado!")}
-            />
+            <div className={styles.actions}>
+              <HighlightButton
+                name={TEXTS.hero.bt.cta}
+                onClick={onContact}
+              />
+
+              <Button
+                name={TEXTS.hero.bt.features}
+                onClick={onFeatures}
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Imagem */}
-        <div className={"imageWrapper"}>
-          <img src={heroImage} alt="Ambiente de trabalho moderno" />
-        </div>
+          {/* Imagem */}
+          <div className={"imageWrapper"}>
+            <img src={heroImage} alt="Ambiente de trabalho moderno" />
+          </div>
 
-      </div>
-    </section>
-  );
-})
+        </div>
+      </section>
+    );
+  })
 
 Hero.displayName = 'Hero'
 export default Hero;

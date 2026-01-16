@@ -21,8 +21,12 @@ export default function App() {
         onAbout={() => scrollToRef(aboutRef)}
         onContact={() => scrollToRef(contactRef)}
       />
-      
-      <Hero ref={heroRef} />
+
+      <Hero
+        ref={heroRef}
+        onContact={() => scrollToRef(contactRef)}
+        onFeatures={() => scrollToRef(featuresRef)}
+      />
       <Features ref={featuresRef} />
       <About ref={aboutRef} />
       <Contact ref={contactRef} />

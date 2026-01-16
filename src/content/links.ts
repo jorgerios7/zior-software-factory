@@ -1,10 +1,4 @@
 export const LINKS = {
-  routes: {
-    home: "/",
-    about: "/sobre",
-    contact: "/contato",
-  },
-
   social: {
     intagram: 'https://www.instagram.com/',
     whatsapp: 'https://whatsapp.com',
