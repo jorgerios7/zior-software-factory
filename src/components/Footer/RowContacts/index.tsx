@@ -7,20 +7,17 @@ type Props = {
     };
 }
 
-export default function RowContacts({list}: Props) {
+export default function RowContacts({ list }: Props) {
     const { title, items } = list;
 
     return (
-        <div className={styles.subContainer}>
+        <nav className={styles.navColumn}>
             <h2 className="description text-sm color-txt-main">
                 {title}
             </h2>
-
-            <nav className={styles.navColumn}>
-                {items.map((item) => (
-                    <p className={"description text-xs color-txt-sec"}>{item}</p>
-                ))}
-            </nav>
-        </div>
+            {items.map((item) => (
+                <p className={"description text-xs color-txt-sec"}>{item}</p>
+            ))}
+        </nav>
     );
 }

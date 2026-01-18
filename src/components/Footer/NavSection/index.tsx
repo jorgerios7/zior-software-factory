@@ -11,18 +11,16 @@ export default function NavSection({ list }: Props) {
     const { title, items } = list;
 
     return (
-        <div className={styles.subContainer}>
+        <nav className={styles.navColumn}>
             <h2 className="description text-sm color-txt-main">
                 {title}
             </h2>
 
-            <nav className={styles.navColumn}>
-                {items.map((item) => (
-                    <button key={item} className={styles.navLink}>
-                        {item}
-                    </button>
-                ))}
-            </nav>
-        </div>
+            {items.map((item) => (
+                <button key={item} className={styles.navLink}>
+                    {item}
+                </button>
+            ))}
+        </nav>
     );
 }
