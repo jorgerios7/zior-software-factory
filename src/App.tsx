@@ -31,7 +31,9 @@ export default function App() {
       <About ref={aboutRef} />
       <Contact ref={contactRef} />
 
-      <Footer />
+      <Footer 
+       onFeatures={() => scrollToRef(featuresRef)}
+      />
     </>
   )
 }

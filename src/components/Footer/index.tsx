@@ -11,12 +11,12 @@ import NavSection from "./NavSection";
 import RowContacts from "./RowContacts";
 import { LINKS } from "../../content/links";
 
-export default function Footer() {
+export default function Footer({ onFeatures }: { onFeatures: () => void }) {
     const socialItems = [
         { icon: xLogo, url: LINKS.social.x },
         { icon: instagramLogo, url: LINKS.social.intagram },
         { icon: linkedinLogo, url: LINKS.social.linkedin },
-        { icon: whatsappLogo, url:LINKS.social.whatsapp },
+        { icon: whatsappLogo, url: LINKS.social.whatsapp },
         { icon: facebookLogo, url: LINKS.social.facebook },
     ];
 
@@ -44,7 +44,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <NavSection list={TEXTS.footer.features} />
+                    <NavSection list={TEXTS.footer.features} onClick={onFeatures} />
 
                     <NavSection list={TEXTS.footer.company} />
 

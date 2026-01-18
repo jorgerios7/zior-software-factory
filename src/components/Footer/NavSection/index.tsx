@@ -5,9 +5,10 @@ type Props = {
         title: string;
         items: string[];
     };
+    onClick?: () => void;
 };
 
-export default function NavSection({ list }: Props) {
+export default function NavSection({ list, onClick }: Props) {
     const { title, items } = list;
 
     return (
@@ -17,10 +18,15 @@ export default function NavSection({ list }: Props) {
             </h2>
 
             {items.map((item) => (
-                <button key={item} className={styles.navLink}>
+                <button
+                    key={item}
+                    className={styles.navLink}
+                    onClick={onClick}
+                >
                     {item}
                 </button>
-            ))}
-        </nav>
+            ))
+            }
+        </nav >
     );
 }
