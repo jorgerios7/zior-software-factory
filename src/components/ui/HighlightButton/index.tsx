@@ -2,7 +2,7 @@ import styles from './HighlightButton.module.css';
 
 type Props = {
     name: string;
-    onClick?: () => void;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function HighlightButton({ name, onClick }: Props) {

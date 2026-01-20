@@ -12,8 +12,21 @@ type Props = {
 }
 
 export default function WhatsappContact({ title, desc, benefitsList, ctaText, statusText }: Props) {
+
+    const whatsappNumber = "5561982434750"; // Altere para o número real
+    const whatsappMessage = "Olá! Gostaria de mais informações sobre os serviços.";
+
+    const handleWhatsAppClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
+
+
     return (
-        <form className={`${styles.whatsappContact} color-card-bg color-bd-main`}>
+        <div className={`${styles.whatsappContact} color-card-bg color-bd-main`}>
 
             {/* WhatsApp Icon */}
             <div className={styles.whatsappIcon}>
@@ -38,7 +51,7 @@ export default function WhatsappContact({ title, desc, benefitsList, ctaText, st
                 ))}
             </div>
 
-            <HighlightButton name={ctaText} onClick={() => window.open(LINKS.social.whatsapp, '_blank')} />
+            <HighlightButton name={ctaText} onClick={handleWhatsAppClick} />
 
             <div className={styles.footer}>
                 <span className={styles.pulseDot} aria-hidden />
@@ -46,6 +59,6 @@ export default function WhatsappContact({ title, desc, benefitsList, ctaText, st
                     {statusText}
                 </p>
             </div>
-        </form>
+        </div>
     );
 }
