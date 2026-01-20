@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import HighlightButton from '../../ui/HighlightButton';
 import styles from './WhatsappContact.module.css';
-import { LINKS } from "../../../content/links";
+import openWhatsapp from '../../../utils/whatsapp';
 
 type Props = {
     title: string;
@@ -12,19 +12,6 @@ type Props = {
 }
 
 export default function WhatsappContact({ title, desc, benefitsList, ctaText, statusText }: Props) {
-
-    const whatsappNumber = "5561982434750"; // Altere para o número real
-    const whatsappMessage = "Olá! Gostaria de mais informações sobre os serviços.";
-
-    const handleWhatsAppClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-
-        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-        window.open(url, '_blank', 'noopener,noreferrer');
-    };
-
-
-
     return (
         <div className={`${styles.whatsappContact} color-card-bg color-bd-main`}>
 
@@ -51,7 +38,7 @@ export default function WhatsappContact({ title, desc, benefitsList, ctaText, st
                 ))}
             </div>
 
-            <HighlightButton name={ctaText} onClick={handleWhatsAppClick} />
+            <HighlightButton name={ctaText} onClick={openWhatsapp} />
 
             <div className={styles.footer}>
                 <span className={styles.pulseDot} aria-hidden />

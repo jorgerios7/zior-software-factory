@@ -100,6 +100,8 @@ export const TEXTS = {
             { name: "Suporte especializado"},
             { name: "Orçamento sem compromisso"},
         ],
+        whatsappNumber: "5561982434750",
+        whatsappMessage: "Olá! Gostaria de mais informações sobre os serviços.",
         cta: "Iniciar Conversa no Whatsapp",
         status: "Online agora - Pronto para atender"
     },
