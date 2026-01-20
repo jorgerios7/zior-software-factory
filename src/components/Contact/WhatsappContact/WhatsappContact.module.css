@@ -39,7 +39,7 @@
 .point {
     width: 10px;
     height: 10px;
-    background-color: orange;
+    background-color: var(--color-bt-main);
     border-radius: 999px;
 }
 
