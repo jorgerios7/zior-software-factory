@@ -10,12 +10,12 @@
     --color-highlight-main: #1F6AE1;
     --color-highlight-sec: #4DA3FF;
 
-    --color-energy-main: #F59E0B;
-    --color-energy-sec: #D97706;
-    --color-energy-ter: #FDBA2D;
+    --color-energy-main: #FDBA2D;  /* #F59E0B */
+    --color-energy-sec: #FFB020; /* #D97706 */
+    --color-energy-ter: #FFCB4D; /* #FDBA2D */
 
     --color-bt-main: #1F6AE1;
-    --color-bt-cta: #F59E0B;
+    --color-bt-cta: #FFB703; /* #F59E0B */
 
     --color-card-bg: #1C2740;
 
