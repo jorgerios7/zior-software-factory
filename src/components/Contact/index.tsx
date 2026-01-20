@@ -1,43 +1,35 @@
 import Badge from '../ui/Badge';
 import styles from './Contact.module.css';
-import contactImage from "../../assets/images/contact-image.png";
 import ContactType from './ContactType';
-import SendMessage from './SendMessage';
+import WhatsappContact from './WhatsappContact';
 import { TEXTS } from '../../content/texts';
 import { forwardRef } from 'react';
 
 const Contact = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <section ref={ref} className={"main color-bg-gradient"}>
-            <div className={"containerMain columnMode"}>
-                <div className={styles.contact}>
+            <div className={`containerMain ${styles.gridMode}`}>
+                <div className={styles.primaryColumn}>
                     <Badge label={TEXTS.contact.badge} />
-                    <h1 className={"title text-lg color-txt-main"}>
-                        {TEXTS.contact.title.a} <br />
-                        {TEXTS.contact.title.b} <br />
+
+                    <h1 className={"title color-txt-main text-el"}>
+                        {TEXTS.contact.title}
                     </h1>
-                    <p className={"description text-md color-txt-sec"}>
+
+                    <p className={"description color-txt-sec text-md"}>
                         {TEXTS.contact.desc}
                     </p>
+
+                    <ContactType contactList={TEXTS.contact.type} />
                 </div>
-
-                <div className={styles.gridView}>
-                    <div className={styles.leftColumn}>
-                        <ContactType
-                            title={TEXTS.contact.titleType}
-                            contact={TEXTS.contact.type}
-                            
-                        />
-
-                        <div className={styles.imageWrapper}>
-                            <img
-                                src={contactImage}
-                                alt="Ambiente de trabalho moderno"
-                            />
-                        </div>
-                    </div>
-
-                    <SendMessage contact={TEXTS.contact.contactForm} />
+                <div className={styles.secondaryColumn}>
+                    <WhatsappContact
+                        title={TEXTS.contact.subTitle}
+                        desc={TEXTS.contact.subDesc}
+                        benefitsList={TEXTS.contact.benefit}
+                        ctaText={TEXTS.contact.cta}
+                        statusText={TEXTS.contact.status}
+                    />
                 </div>
             </div>
         </section>

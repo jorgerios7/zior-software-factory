@@ -85,25 +85,23 @@ export const TEXTS = {
     },
 
     contact: {
-        badge: "Fale Conosco",
-        title: {
-            a: "Vamos conversar sobre seu",
-            b: "projeto?"
-        },
-        desc: "Entre em contato e descubra como podemos transformar suas ideias em realidade.",
-        titleType: "Informações de Contato",
+        badge: "Entre em Contato",
+        title: "Vamos Conversar?",
+        desc: "Estamos prontos para transformar suas ideias em realidade. Entre em contato através do WhatsApp e receba atendimento personalizado.",
         type: [
             { name: "Email", value: "contato@zior.com.br", icon: "mail" as IconKey },
-            { name: "Telefone", value: "(61) 9 8243-4750", icon: "phone" as IconKey },
+            { name: "Telefone", value: "(61) 98243-4750", icon: "phone" as IconKey },
             { name: "Localização", value: "Santa Maria, DF - Brasil", icon: "map" as IconKey },
         ],
-        contactForm: [
-            { label: "Nome completo *", placeHolder: "Seu nome", type: "text" },
-            { label: "Email *", placeHolder: "seu@email.com", type: "email" },
-            { label: "Telefone *", placeHolder: "(00) 00000-0000", type: "tel" },
-            { label: "Mensagem *", placeHolder: "Conte-nos sobre seu projeto...", type: "text" },
+        subTitle: "Atendimento via WhatsApp", 
+        subDesc: "Estamos prontos para transformar suas ideias em realidade. Entre em contato através do WhatsApp e receba atendimento personalizado.",
+        benefit: [
+            { name: "Resposta em até 5 minutos" },
+            { name: "Suporte especializado"},
+            { name: "Orçamento sem compromisso"},
         ],
-        cta: "Enviar Mensagem",
+        cta: "Iniciar Conversa no Whatsapp",
+        status: "Online agora - Pronto para atender"
     },
 
     footer: {

@@ -6,42 +6,31 @@
     gap: 21px 
 }
 
-.gridView {
+.gridMode {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: "primary secondary";
     gap: 21px;
     width: 100%;
-    align-items: stretch;
 }
 
-.leftColumn { 
+.primaryColumn {
+    grid-area: primary;
     display: flex;
     flex-direction: column;
     gap: 21px;
 }
 
+.secondaryColumn {
+    grid-area: secondary;
+    height: 100%;
+}
+
 @media (max-width: 768px) {
-    .gridView {
+    .gridMode {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "primary"
+            "secondary";
     }
-
-    .leftColumn {
-        order: 2;
-    }
-
-    .sendMessage {
-        order: 1;
-    }
-}
-
-.imageWrapper {
-  max-width: 720px;
-  width: 100%;
-}
-
-.imageWrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 21px;
-  object-fit: cover;
 }

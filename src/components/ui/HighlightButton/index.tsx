@@ -2,13 +2,14 @@ import styles from './HighlightButton.module.css';
 
 type Props = {
     name: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export default function HighlightButton({ name, onClick }: Props) {
 
     return (
         <button
+            type="button"
             className={styles.button}
             onClick={onClick}
         >

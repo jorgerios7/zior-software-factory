@@ -10,11 +10,10 @@ export type Contact = {
 };
 
 type Props = {
-    title: string;
-    contact: Contact[];
+    contactList: Contact[];
 };
 
-export default function ContactType({ title, contact }: Props) {
+export default function ContactType({ contactList }: Props) {
     const ICONS = {
         mail: Mail,
         phone: Phone,
@@ -23,11 +22,7 @@ export default function ContactType({ title, contact }: Props) {
 
     return (
         <section className={`${styles.contactItem} color-card-bg color-bd-main`}>
-            <h1 className="description color-txt-main text-md">
-                {title}
-            </h1>
-
-            {contact.map(({ name, value, icon }) => {
+            {contactList.map(({ name, value, icon }) => {
                 const Icon = ICONS[icon];
 
                 return (
