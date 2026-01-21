@@ -47,8 +47,7 @@
     position: relative;
     width: 10px;
     height: 10px;
-    background-color: #22c55e;
-    /* verde online */
+    background-color: var(--color-energy-main);
     border-radius: 50%;
 }
 
