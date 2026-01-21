@@ -5,7 +5,7 @@ export const TEXTS = {
         bt_hero: "Início",
         bt_features: "Serviços",
         bt_about: "Sobre",
-        cta: "Fale conosco",
+        cta: "Fale Conosco",
     },
 
     hero: {
