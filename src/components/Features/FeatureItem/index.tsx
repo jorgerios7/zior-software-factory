@@ -10,7 +10,7 @@ export default function FeatureItem({ title, description, icon }: Props) {
     return (
         <section className={`${styles.featureItem} color-card-bg color-bd-main`}>
 
-            <div className={"iconWrapper"}>
+            <div className={styles.iconWrapper}>
                 {icon}
             </div>
 

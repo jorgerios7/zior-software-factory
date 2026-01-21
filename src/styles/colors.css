@@ -1,5 +1,6 @@
 :root {
     --color-primary: 60, 96, 180;
+    --color-secondary:  46, 125, 50;
 
     --color-bg-main: #000000;
     --color-bg-sec: #0d1117;
@@ -17,7 +18,7 @@
     --color-bt-main: #1F6AE1;
     --color-bt-cta: #38d408; /* #F59E0B */
 
-    --color-card-bg: #0B1C2D; /*#1C2740*/ 
+    --color-card-bg: #1C2740;
 
     --bg-header: rgba(11, 15, 20, 0.75);
 
@@ -91,4 +92,8 @@
 
 .color-bd-main {
     border: 1px solid rgba(var(--color-primary), 0.4);
+}
+
+.color-bd-sec {
+    border: 1px solid rgba(var(--color-secondary), 0.4);
 }

@@ -19,7 +19,7 @@
     background: radial-gradient(circle at left,
             rgba(0, 38, 255, 0.08),
             transparent 40%),
-        linear-gradient(135deg, var(--color-highlight-main), var(--color-highlight-sec));
+        linear-gradient(135deg, var(--color-energy-main), var(--color-energy-sec));
 }
 
 .benefitContainer {
@@ -39,7 +39,7 @@
 .point {
     width: 10px;
     height: 10px;
-    background-color: var(--color-bt-main);
+    background-color: var(--color-energy-main);
     border-radius: 999px;
 }
 
@@ -56,7 +56,7 @@
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    background-color: rgba(34, 197, 94, 0.6);
+    background-color: var(--color-energy-main);
     animation: pulse 1.6s ease-out infinite;
 }
 

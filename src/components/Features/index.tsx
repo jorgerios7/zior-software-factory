@@ -24,31 +24,31 @@ const Features = forwardRef<HTMLDivElement>((_, ref) => {
 
                 <div className={styles.featuresList}>
                     <FeatureItem
-                        icon={<Code size={24} />}
+                        icon={<Code size={28} />}
                         title={TEXTS.features.services.webDevelopment.title}
                         description={TEXTS.features.services.webDevelopment.desc}
                     />
 
                     <FeatureItem
-                        icon={<Smartphone size={24} />}
+                        icon={<Smartphone size={28} />}
                         title={TEXTS.features.services.mobileDevelopment.title}
                         description={TEXTS.features.services.mobileDevelopment.desc}
                     />
 
                     <FeatureItem
-                        icon={<Cloud size={30} />}
+                        icon={<Cloud size={28} />}
                         title={TEXTS.features.services.cloudComputing.title}
                         description={TEXTS.features.services.cloudComputing.desc}
                     />
 
                     <FeatureItem
-                        icon={<BriefcaseBusiness size={24} />}
+                        icon={<BriefcaseBusiness size={28} />}
                         title={TEXTS.features.services.businessIntelligence.title}
                         description={TEXTS.features.services.businessIntelligence.desc}
                     />
 
                     <FeatureItem
-                        icon={<Shield size={24} />}
+                        icon={<Shield size={28} />}
                         title={TEXTS.features.services.digitalSecurity.title}
                         description={TEXTS.features.services.digitalSecurity.desc}
                     />
