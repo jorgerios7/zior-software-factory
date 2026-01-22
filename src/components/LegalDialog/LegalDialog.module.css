@@ -1,0 +1,78 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: #00000026;
+    z-index: 2999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+.dialog {
+    width: 80%;
+    max-height: 90vh;
+
+    background: var(--color-card-bg);
+    color: #fff;
+
+    border-radius: 14px;
+    border: 1px solid rgba(var(--color-primary), 0.4);
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+    transition:
+        opacity 0.50s ease,
+        transform 0.50s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 21px;
+    padding-left: 21px;
+    padding-top: 7px;
+    border-radius: 14px;
+    border: 1px solid rgba(var(--color-primary), 0.4);
+}
+
+.btClose {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0px;
+}
+
+.btClose:focus,
+.btClose:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.btClose:focus-visible {
+    outline: none;
+}
+
+.content {
+    margin-top: 0px;
+    overflow-y: auto;
+}
+
+.overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay.open .dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}

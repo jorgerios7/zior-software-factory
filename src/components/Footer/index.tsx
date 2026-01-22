@@ -11,7 +11,13 @@ import NavSection from "./NavSection";
 import RowContacts from "./RowContacts";
 import { LINKS } from "../../content/links";
 
-export default function Footer({ onFeatures }: { onFeatures: () => void }) {
+type Props = {
+    onFeatures: () => void;
+    onPrivacyPolicy: () => void;
+    onTerms: () => void;
+}
+
+export default function Footer({ onFeatures, onPrivacyPolicy, onTerms }: Props) {
     const socialItems = [
         { icon: xLogo, url: LINKS.social.x },
         { icon: instagramLogo, url: LINKS.social.intagram },
@@ -59,8 +65,12 @@ export default function Footer({ onFeatures }: { onFeatures: () => void }) {
                     </h1>
 
                     <div className={styles.navRow}>
-                        <button>{TEXTS.footer.legal.privacyPolicy}</button>
-                        <button>{TEXTS.footer.legal.terms}</button>
+                        <button onClick={onPrivacyPolicy}>
+                            {TEXTS.footer.legal.privacyPolicy}
+                        </button>
+                        <button onClick={onTerms}>
+                            {TEXTS.footer.legal.terms}
+                        </button>
                     </div>
                 </div>
 
