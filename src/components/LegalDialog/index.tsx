@@ -35,9 +35,14 @@ export function LegalDialog({
   onClose,
 }: LegalDialogProps) {
   useEffect(() => {
-    document.body.style.overflow = type ? "hidden" : "";
+    const originalOverflow = document.body.style.overflow;
+
+    if (type !== "none") {
+      document.body.style.overflow = "hidden";
+    }
+
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = originalOverflow;
     };
   }, [type]);
 
@@ -67,7 +72,7 @@ export function LegalDialog({
             <h2 className="description text-emd color-txt-main">{label}</h2>
           </div>
           <p className={`${styles.updateInf} description text-xs color-txt-sec`}>
-           { `${LAST_UPDATE.label} ${LAST_UPDATE.text}`  }
+            {`${LAST_UPDATE.label} ${LAST_UPDATE.text}`}
           </p>
         </header>
 
