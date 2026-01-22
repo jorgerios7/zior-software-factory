@@ -1,7 +1,7 @@
 import styles from "./LegalView.module.css";
 
 type LegalProps = {
-    title: string
+    title?: string
     text: string;
 }
 
@@ -14,7 +14,7 @@ const LegalView = ({ legalList }: Props) => {
         <section className={styles.containerMain}>
             {legalList.map((term, index) => (
                 <section key={index}>
-                    <h3 className={"title text-md color-txt-sec"}>{term.title}</h3>
+                    {term.title && <h3 className={"title text-md color-txt-sec"}>{term.title}</h3>}
                     <p className={"description text-xs color-txt-main"}>{term.text}</p>
                 </section>
             ))}

@@ -7,9 +7,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import { scrollToRef } from "./utils/scrollToRef";
 import { LegalDialog } from "./components/LegalDialog";
-import LegalView from "./components/LegalDialog/LegalView";
-import { TERMS } from "./content/terms";
-import { PRIVACY_POLICY } from "./content/privacyPolicy";
 
 export default function App() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -18,7 +15,7 @@ export default function App() {
   const contactRef = useRef<HTMLDivElement>(null);
 
   type LegalType = "privacy" | "terms" | "none";
-  const [openLegal, setOpenLegal] = useState<LegalType>("none");
+  const [legaType, setLegalType] = useState<LegalType>("none");
 
   return (
     <>
@@ -40,23 +37,14 @@ export default function App() {
       <Contact ref={contactRef} />
 
       <LegalDialog
-        open={openLegal !== "none"}
-        title={openLegal as LegalType}
-        onClose={() => setOpenLegal("none")}
-      >
-        {openLegal === "privacy" && (
-          <LegalView legalList={PRIVACY_POLICY}/>
-        )}
-
-        {openLegal === "terms" && (
-          <LegalView legalList={TERMS}/>
-        )}
-      </LegalDialog>
+        type={legaType}
+        onClose={() => setLegalType("none")}
+      />
 
       <Footer
         onFeatures={() => scrollToRef(featuresRef)}
-        onPrivacyPolicy={() => setOpenLegal("privacy")}
-        onTerms={() => setOpenLegal("terms")}
+        onPrivacyPolicy={() => setLegalType("privacy")}
+        onTerms={() => setLegalType("terms")}
       />
     </>
   );

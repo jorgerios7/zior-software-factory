@@ -115,7 +115,8 @@ export const TEXTS = {
                 "Aplicativos Mobile",
                 "Cloud Computing",
                 "Business Intelligence",
-                "Segurança Digital"
+                "Segurança Digital", 
+                "Suport Técnico"
             ]
         },
         company: {
@@ -136,7 +137,7 @@ export const TEXTS = {
                 "Brasil"
             ]
         },
-        rights: "© 2026 Zior Technology. Todos os direitos reservados.",
+        rights: "© 2026 Zior Tecnologia. Todos os direitos reservados.",
         legal: {
             privacyPolicy: "Política de Privacidade",
             terms: "Termos de Uso"

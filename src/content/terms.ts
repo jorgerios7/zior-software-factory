@@ -1,6 +1,5 @@
 export const TERMS = [
     {
-        title: "Termos de Uso",
         text: "Ao acessar o site Zior Tecnologia, você concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis, bem como se responsabiliza pelo cumprimento de todas as leis locais aplicáveis. Caso não concorde com algum destes termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis."
     },
     {

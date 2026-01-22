@@ -1,6 +1,5 @@
 export const PRIVACY_POLICY = [
     {
-        title: "Política de Privacidade",
         text: "A sua privacidade é importante para nós. É política do Zior Tecnologia respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site Zior Tecnologia, bem como em outros sites que possuímos e operamos."
     },
     {
@@ -52,3 +51,8 @@ export const PRIVACY_POLICY = [
         text: "Esta política é efetiva a partir de 21 de janeiro de 2026, às 20:37."
     }
 ];
+
+export const LAST_UPDATE = {
+    label: "Última atualização: ",
+    text: "21 de janeiro de 2026"
+}

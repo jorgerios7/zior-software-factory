@@ -39,7 +39,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 21px;
-    gap: 14px;
+    gap: 7px;
     border-bottom: 1px solid rgba(var(--color-primary), 0.4);
 }
 
@@ -86,4 +86,11 @@ header {
 .overlay.open .dialog {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+.updateInf {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: start;
 }
