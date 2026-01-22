@@ -1,47 +1,72 @@
-import { useEffect } from "react";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import styles from "./LegalDialog.module.css";
-import { X } from "lucide-react";
+import { X, FileText, Shield } from "lucide-react";
+
+type LegalDialogType = "privacy" | "terms";
 
 interface LegalDialogProps {
-    open: boolean;
-    title: string;
-    onClose: () => void;
-    children: ReactNode;
+  open: boolean;
+  title: LegalDialogType;
+  onClose: () => void;
+  children: ReactNode;
 }
 
+const TITLE_CONFIG: Record<
+  LegalDialogType,
+  { icon: ReactNode; label: string }
+> = {
+  privacy: {
+    icon: <Shield size={42} />,
+    label: "Política de Privacidade",
+  },
+  terms: {
+    icon: <FileText size={42} />,
+    label: "Termos de Uso",
+  },
+};
+
 export function LegalDialog({
-    open,
-    title,
-    onClose,
-    children,
+  open,
+  title,
+  onClose,
+  children,
 }: LegalDialogProps) {
-    useEffect(() => {
-        document.body.style.overflow = open ? "hidden" : "";
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [open]);
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
-    if (!open) return null;
+  if (!open) return null;
 
-    function renderTitle() {
-        return title === "privacy"
-            ? "Política de Privacidade"
-            : "Termos de Uso"
-    }
+  const { icon, label } = TITLE_CONFIG[title];
 
-    return (
-        <div className={`${styles.overlay} ${styles.open}`} role={styles.dialog} aria-modal="true">
-            <div className={styles.dialog}>
-                <header>
-                    <h2 className={"text-emd color-txt-main"}>{renderTitle()}</h2>
-                    <button className={styles.btClose} onClick={onClose} aria-label="Fechar">
-                        <X size={42} />
-                    </button>
-                </header>
-                <section className={styles.content}>{children}</section>
-            </div>
-        </div>
-    );
+  return (
+    <div
+      className={`${styles.overlay} ${styles.open}`}
+      role="dialog"
+      aria-modal="true"
+    >
+      <div className={styles.dialog}>
+        <header className={styles.header}>
+          <div className={styles.containerTitle}>
+            {icon}
+            <h2 className="text-emd color-txt-main">{label}</h2>
+          </div>
+
+          <button
+            type="button"
+            className={styles.btClose}
+            onClick={onClose}
+            aria-label="Fechar"
+          >
+            <X size={42} />
+          </button>
+        </header>
+
+        <section className={styles.content}>{children}</section>
+      </div>
+    </div>
+  );
 }

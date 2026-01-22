@@ -41,8 +41,14 @@ header {
     padding-right: 21px;
     padding-left: 21px;
     padding-top: 7px;
-    border-radius: 14px;
-    border: 1px solid rgba(var(--color-primary), 0.4);
+    border-bottom: 1px solid rgba(var(--color-primary), 0.4);
+}
+
+.containerTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px
 }
 
 .btClose {
