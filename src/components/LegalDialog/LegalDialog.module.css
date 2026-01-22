@@ -36,23 +36,28 @@
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding-right: 21px;
-    padding-left: 21px;
-    padding-top: 7px;
+    padding: 21px;
+    gap: 14px;
     border-bottom: 1px solid rgba(var(--color-primary), 0.4);
 }
 
 .containerTitle {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 14px
+    gap: 14px;
+    display: flex;
+    justify-content: start;
 }
 
 .btClose {
+    width: 100%;
     background-color: transparent;
+    display: flex;
+    justify-content: end;
     border: none;
     outline: none;
     padding: 0px;

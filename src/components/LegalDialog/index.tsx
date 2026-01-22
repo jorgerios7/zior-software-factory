@@ -54,11 +54,6 @@ export function LegalDialog({
     >
       <div className={styles.dialog}>
         <header className={styles.header}>
-          <div className={styles.containerTitle}>
-            {icon}
-            <h2 className="text-emd color-txt-main">{label}</h2>
-          </div>
-
           <button
             type="button"
             className={styles.btClose}
@@ -67,6 +62,11 @@ export function LegalDialog({
           >
             <X size={42} />
           </button>
+
+          <div className={styles.containerTitle}>
+            {icon}
+            <h2 className="description text-emd color-txt-main">{label}</h2>
+          </div>
         </header>
 
         <section className={styles.content}>{children}</section>
