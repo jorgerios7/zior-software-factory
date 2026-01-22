@@ -2,7 +2,7 @@ import { useEffect, type ReactNode } from "react";
 import styles from "./LegalDialog.module.css";
 import { X, FileText, Shield } from "lucide-react";
 
-type LegalDialogType = "privacy" | "terms";
+type LegalDialogType = "privacy" | "terms" | "none";
 
 interface LegalDialogProps {
   open: boolean;
@@ -23,6 +23,10 @@ const TITLE_CONFIG: Record<
     icon: <FileText size={42} />,
     label: "Termos de Uso",
   },
+  none: {
+    icon: null,
+    label: "",
+  }
 };
 
 export function LegalDialog({

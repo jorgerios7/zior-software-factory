@@ -17,8 +17,8 @@ export default function App() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  type LegalType = "privacy" | "terms" | null;
-  const [openLegal, setOpenLegal] = useState<LegalType>(null);
+  type LegalType = "privacy" | "terms" | "none";
+  const [openLegal, setOpenLegal] = useState<LegalType>("none");
 
   return (
     <>
@@ -40,9 +40,9 @@ export default function App() {
       <Contact ref={contactRef} />
 
       <LegalDialog
-        open={openLegal !== null}
-        title={openLegal as string}
-        onClose={() => setOpenLegal(null)}
+        open={openLegal !== "none"}
+        title={openLegal as LegalType}
+        onClose={() => setOpenLegal("none")}
       >
         {openLegal === "privacy" && (
           <LegalView legalList={PRIVACY_POLICY}/>
