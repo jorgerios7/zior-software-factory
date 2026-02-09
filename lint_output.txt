@@ -1,0 +1,16 @@
+
+> zior-software-factory@0.0.0 lint
+> eslint .
+
+
+C:\Users\jorge\Documents\Projetos\zior-software-factory\src\App.test.tsx
+  1:18  error  'screen' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\jorge\Documents\Projetos\zior-software-factory\src\components\Contact\WhatsappContact\index.tsx
+  33:21  error  Unnecessary conditional, expected left-hand side of `??` operator to be possibly null or undefined  @typescript-eslint/no-unnecessary-condition
+
+C:\Users\jorge\Documents\Projetos\zior-software-factory\src\main.tsx
+  9:12  error  Forbidden non-null assertion  @typescript-eslint/no-non-null-assertion
+
+Ô£û 3 problems (3 errors, 0 warnings)
+

@@ -1,23 +1,36 @@
-import styles from './Hero.module.css';
+import styles from "./Hero.module.css";
 import heroImage from "../../assets/images/hero-image.png";
-import HighlightButton from '../ui/HighlightButton';
-import Button from './Button';
-import Badge from '../ui/Badge';
-import { TEXTS } from '../../content/texts';
-import { forwardRef } from 'react';
+import HighlightButton from "../ui/HighlightButton";
+import Button from "./Button";
+import Badge from "../ui/Badge";
+import { TEXTS } from "../../content/texts";
+import { forwardRef } from "react";
+import { motion } from 'framer-motion';
 
 type Props = {
   onContact: () => void;
   onFeatures: () => void;
-}
+};
 
-const Hero = forwardRef<HTMLDivElement, Props>(({ onContact, onFeatures }, ref) => {
+const Hero = forwardRef<HTMLDivElement, Props>(
+  ({ onContact, onFeatures }, ref) => {
     return (
-      <section ref={ref} className={`main bg-main-gradient ${styles.paddingTop}`}>
-        <div className={"containerMain gridMode"}>
-
-          <div className={styles.content}>
-
+      <section
+        ref={ref}
+        className={`main bg-main-gradient ${styles.paddingTop}`}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className={"containerMain gridMode"}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className={styles.content}
+          >
             <Badge label={TEXTS.hero.badge} />
 
             <h1 className={"title color-txt-main text-elg"}>
@@ -31,27 +44,25 @@ const Hero = forwardRef<HTMLDivElement, Props>(({ onContact, onFeatures }, ref) 
             </p>
 
             <div className={styles.actions}>
-              <HighlightButton
-                name={TEXTS.hero.bt.cta}
-                onClick={onContact}
-              />
+              <HighlightButton name={TEXTS.hero.bt.cta} onClick={onContact} />
 
-              <Button
-                name={TEXTS.hero.bt.features}
-                onClick={onFeatures}
-              />
+              <Button name={TEXTS.hero.bt.features} onClick={onFeatures} />
             </div>
-          </div>
+          </motion.div>
 
           {/* Imagem */}
-          <div className={"imageWrapper"}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className={"imageWrapper"}>
             <img src={heroImage} alt="Ambiente de trabalho moderno" />
-          </div>
-
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
     );
-  })
+  }
+);
 
-Hero.displayName = 'Hero'
+Hero.displayName = "Hero";
 export default Hero;

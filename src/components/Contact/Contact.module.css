@@ -1,36 +1,36 @@
 .contact {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    gap: 21px 
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 21px;
 }
 
 .gridMode {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-areas: "primary secondary";
-    gap: 21px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-areas: "primary secondary";
+  gap: 21px;
+  width: 100%;
 }
 
 .primaryColumn {
-    grid-area: primary;
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
+  grid-area: primary;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
 }
 
 .secondaryColumn {
-    grid-area: secondary;
-    height: 100%;
+  grid-area: secondary;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
-    .gridMode {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "primary"
-            "secondary";
-    }
+  .gridMode {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "primary"
+      "secondary";
+  }
 }

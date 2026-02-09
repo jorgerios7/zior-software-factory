@@ -4,13 +4,14 @@ import { X, FileText, Shield } from "lucide-react";
 import LegalView from "./LegalView";
 import { LAST_UPDATE, PRIVACY_POLICY } from "../../content/privacyPolicy";
 import { TERMS } from "../../content/terms";
+import { motion } from 'framer-motion';
 
 type LegalDialogType = "privacy" | "terms" | "none";
 
-interface LegalDialogProps {
+type LegalDialogProps = {
   type: LegalDialogType;
   onClose: () => void;
-}
+};
 
 const TITLE_CONFIG: Record<
   LegalDialogType,
@@ -27,13 +28,10 @@ const TITLE_CONFIG: Record<
   none: {
     icon: null,
     label: "",
-  }
+  },
 };
 
-export function LegalDialog({
-  type,
-  onClose,
-}: LegalDialogProps) {
+export function LegalDialog({ type, onClose }: LegalDialogProps) {
   useEffect(() => {
     const originalOverflow = document.body.style.overflow;
 
@@ -51,12 +49,21 @@ export function LegalDialog({
   const { icon, label } = TITLE_CONFIG[type];
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
       className={`${styles.overlay} ${styles.open}`}
       role="dialog"
       aria-modal="true"
     >
-      <div className={styles.dialog}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className={styles.dialog}>
         <header className={styles.header}>
           <button
             type="button"
@@ -67,25 +74,28 @@ export function LegalDialog({
             <X size={42} />
           </button>
 
-          <div className={styles.containerTitle}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className={styles.containerTitle}>
             {icon}
             <h2 className="description text-emd color-txt-main">{label}</h2>
-          </div>
-          <p className={`${styles.updateInf} description text-xs color-txt-sec`}>
+          </motion.div>
+          <p
+            className={`${styles.updateInf} description text-xs color-txt-sec`}
+          >
             {`${LAST_UPDATE.label} ${LAST_UPDATE.text}`}
           </p>
         </header>
 
         <section className={styles.content}>
-          {type === "privacy" && (
-            <LegalView legalList={PRIVACY_POLICY} />
-          )}
+          {type === "privacy" && <LegalView legalList={PRIVACY_POLICY} />}
 
-          {type === "terms" && (
-            <LegalView legalList={TERMS} />
-          )}
+          {type === "terms" && <LegalView legalList={TERMS} />}
         </section>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

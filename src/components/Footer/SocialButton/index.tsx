@@ -1,11 +1,11 @@
-import styles from './SocialButton.module.css';
+import styles from "./SocialButton.module.css";
 
 type Props = {
   icon: string;
   url: string;
 };
 
-export default function SocialButton({ icon, url}: Props) {
+export default function SocialButton({ icon, url }: Props) {
   return (
     <a
       href={url}
@@ -15,10 +15,7 @@ export default function SocialButton({ icon, url}: Props) {
       aria-label={"label"}
     >
       <div className={styles.logo}>
-        <img
-          src={icon}
-          alt={"label"}
-        />
+        <img src={icon} alt={"label"} />
       </div>
     </a>
   );

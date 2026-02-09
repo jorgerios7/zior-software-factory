@@ -20,12 +20,11 @@
   gap: 21px;
 }
 
-
 .grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 35px
+  gap: 35px;
 }
 
 .subContainer {
@@ -47,7 +46,7 @@
 .navColumn button {
   background: none;
   border: none;
-  color: var(--color-txt-sec);
+  color: white;
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
@@ -57,14 +56,13 @@
 }
 
 .navColumn button:hover {
-  color: var(--color-energy-main);
+  color: var(--color-secondary);
 }
 
 .navColumn button:focus,
 .navColumn button:active {
   outline: none;
 }
-
 
 .navRow {
   display: flex;
@@ -75,7 +73,7 @@
 .navRow button {
   background: none;
   border: none;
-  color: var(--color-txt-sec);
+  color: var(--color-text-secondary);
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
@@ -85,7 +83,7 @@
 }
 
 .navRow button:hover {
-  color: var(--color-energy-main);
+  color: var(--color-secondary);
 }
 
 .navRow button:focus,
@@ -110,6 +108,7 @@
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
+  color: var(--color-text-secondary);
 }
 
 .footerLegal {

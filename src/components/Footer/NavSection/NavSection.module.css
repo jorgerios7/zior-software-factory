@@ -11,7 +11,7 @@
 .navColumn button {
   background: none;
   border: none;
-  color: var(--color-txt-sec);
+  color: var(--color-text-secondary);
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
@@ -21,7 +21,7 @@
 }
 
 .navColumn button:hover {
-  color: var(--color-energy-main);
+  color: var(--color-secondary);
 }
 
 .navColumn button:focus,

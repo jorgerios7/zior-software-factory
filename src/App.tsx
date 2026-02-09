@@ -36,10 +36,7 @@ export default function App() {
       <About ref={aboutRef} />
       <Contact ref={contactRef} />
 
-      <LegalDialog
-        type={legaType}
-        onClose={() => setLegalType("none")}
-      />
+      <LegalDialog type={legaType} onClose={() => setLegalType("none")} />
 
       <Footer
         onFeatures={() => scrollToRef(featuresRef)}

@@ -1,28 +1,27 @@
 .socialButton {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 7px;
-    transition: border-color 0.5s ease;
-    background-color: var(--color-card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 7px;
+  transition: border-color 0.5s ease;
+  background-color: var(--color-card-bg);
 }
 
 .logo:hover {
-    background: radial-gradient(circle at left,
-            rgba(0, 224, 255, 0.08),
-            transparent 40%),
-        linear-gradient(135deg, var(--color-bt-main), var(--color-bt-cta));
+  background:
+    radial-gradient(circle at left, rgba(0, 224, 255, 0.08), transparent 40%),
+    linear-gradient(135deg, var(--color-bt-main), var(--color-bt-cta));
 }
 
 .logo img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
 }

@@ -1,36 +1,35 @@
 .contactItem {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    gap: 21px;
-    padding: 21px;
-    box-sizing: border-box;
-    border-radius: 14px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21px;
+  padding: 21px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  box-sizing: border-box;
 }
 
-.subItem{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 21px
+.subItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
 }
 
 .iconWrapper {
-    width: 49px;
-    height: 49px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    background: radial-gradient(circle at left,
-            rgba(0, 38, 255, 0.08),
-            transparent 40%),
-        linear-gradient(135deg, var(--color-energy-sec), var(--color-energy-ter));
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at left, rgba(0, 38, 255, 0.08), transparent 40%),
+    linear-gradient(135deg, var(--color-energy-sec), var(--color-energy-ter));
 }
 
 .containerText {
-    flex-direction: column;
-    justify-items: start;
-    align-content: center;
+  flex-direction: column;
+  justify-items: start;
+  align-content: center;
 }

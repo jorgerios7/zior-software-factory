@@ -1,99 +1,85 @@
 :root {
-    --color-primary: 60, 96, 180;
-    --color-secondary:  46, 125, 50;
+  /* Mapping legacy variables to new design system */
+  --color-txt-main: var(--color-text-primary);
+  --color-txt-sec: var(--color-text-secondary);
 
-    --color-bg-main: #000000;
-    --color-bg-sec: #0d1117;
+  --color-bg-main: var(--color-bg-primary);
+  --color-bg-sec: var(--color-bg-secondary);
 
-    --color-txt-main: #ffffff;
-    --color-txt-sec: #9ca3af;
+  --color-card-bg: var(--color-bg-secondary);
 
-    --color-highlight-main: #1F6AE1; /* #1F6AE1 */
-    --color-highlight-sec: #00AEEF; /*#4DA3FF*/
+  /* Gradients */
+  --bg-main-gradient: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  --bg-sec-gradient: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
 
-    --color-energy-main: #2ebc03;  /* #F59E0B */
-    --color-energy-sec: #2fa301; /* #D97706 */
-    --color-energy-ter: #5cec19; /* #FDBA2D */
+  /* Specifics */
+  --color-highlight-main: var(--color-primary);
+  --color-highlight-sec: var(--color-info);
 
-    --color-bt-main: #1F6AE1;
-    --color-bt-cta: #38d408; /* #F59E0B */
-
-    --color-card-bg: #1C2740;
-
-    --bg-header: rgba(11, 15, 20, 0.75);
-
-    --bg-main-gradient: linear-gradient(135deg,
-            #000000 0%,
-            #0D1117 45%,
-            #141A22 100%);
-
-
-    --bg-sec-gradient: linear-gradient(135deg,
-            #141A22 0%,
-            #181F2A 50%,
-            #1C2740 100%);
+  --color-bt-main: var(--color-primary);
+  --color-bt-cta: var(--color-secondary);
 }
 
 .color-bg-main {
-    background: var(--color-bg-main);
+  background: var(--color-bg-main);
 }
 
 .color-bg-sec {
-    background: var(--color-bg-sec);
+  background: var(--color-bg-sec);
 }
 
 .bg-main-gradient {
-    background: var(--bg-main-gradient);
+  background: var(--bg-main-gradient);
 }
 
 .color-bg-gradient {
-    background: var(--bg-sec-gradient);
+  background: var(--bg-sec-gradient);
 }
 
 .color-txt-main {
-    color: var(--color-txt-main);
+  color: var(--color-txt-main);
 }
 
 .color-txt-sec {
-    color: var(--color-txt-sec);
+  color: var(--color-txt-sec);
 }
 
 .color-highlight-main {
-    color: var(--color-highlight-main);
+  color: var(--color-highlight-main);
 }
 
 .color-highlight-sec {
-    color: var(--color-highlight-sec);
+  color: var(--color-highlight-sec);
 }
 
 .color-energy-main {
-    color: var(--color-energy-main);
+  color: var(--color-energy-main);
 }
 
 .color-energy-sec {
-    color: var(--color-energy-sec);
+  color: var(--color-energy-sec);
 }
 
 .color-energy-ter {
-    color: var(--color-energy-ter);
+  color: var(--color-energy-ter);
 }
 
 .color-bt-main {
-    color: var(--color-bt-main);
+  color: var(--color-bt-main);
 }
 
 .color-bt-cta {
-    color: var(--color-bt-cta);
+  color: var(--color-bt-cta);
 }
 
 .color-card-bg {
-    background: var(--color-card-bg);
+  background: var(--color-card-bg);
 }
 
 .color-bd-main {
-    border: 1px solid rgba(var(--color-primary), 0.4);
+  border: 1px solid var(--color-border);
 }
 
 .color-bd-sec {
-    border: 1px solid rgba(var(--color-secondary), 0.4);
+  border: 1px solid var(--color-border);
 }

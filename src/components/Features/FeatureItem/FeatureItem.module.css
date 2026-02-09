@@ -11,7 +11,7 @@
   border-radius: 14px;
   box-sizing: border-box;
 
-  background: var(--color-card-bg);
+  background: var(--color-primary);
   border: 1px solid var(--color-primary);
 
   transition:
@@ -37,12 +37,9 @@
 .featureItem:hover {
   transform: translateY(-7px);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(
-    135deg,
-    var(--color-energy-sec) 0%,
-    var(--color-energy-main) 50%,
-    var(--color-energy-ter) 100% 
-  );  
+  background: linear-gradient(135deg,
+      var(--color-secondary) 0%,
+      var(--color-secondary-hover) 100%);
 }
 
 .featureItem:hover::before {
@@ -50,28 +47,26 @@
 }
 
 .textSec {
-  color: var(--color-txt-sec);
+  color: var(--color-text-secondary);
   transition: color 0.25s ease;
 }
 
 .featureItem:hover .textSec {
-  color: var(--color-txt-main);
+  color: white;
 }
 
 .iconWrapper {
-    width: 49px;
-    height: 49px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    background: radial-gradient(circle at left,
-            rgba(0, 38, 255, 0.08),
-            transparent 40%),
-        linear-gradient(135deg, var(--color-energy-main), var(--color-energy-sec));
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at left, rgba(0, 38, 255, 0.08), transparent 40%),
+    linear-gradient(135deg, var(--color-secondary), var(--color-secondary-hover));
 }
 
 .featureItem:hover .iconWrapper {
-  background:
-    "transparent"
+  background: "transparent";
 }

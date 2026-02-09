@@ -1,146 +1,146 @@
-type IconKey = 'mail' | 'phone' | 'map';
+type IconKey = "mail" | "phone" | "map";
 
 export const TEXTS = {
-    header: {
-        bt_hero: "Início",
-        bt_features: "Serviços",
-        bt_about: "Sobre",
-        cta: "Fale Conosco",
+  header: {
+    bt_features: "Serviços",
+    bt_about: "Sobre",
+    cta: "Fale Conosco",
+  },
+
+  hero: {
+    badge: "Soluções em Tecnologia",
+    title: {
+      a: "Transforme seu",
+      b: "negócio com",
+      c: "tecnologia",
     },
 
-    hero: {
-        badge: "Soluções em Tecnologia",
-        title: {
-            a: "Transforme seu",
-            b: "negócio com",
-            c: "tecnologia"
-        },
-
-        desc: "Desenvolvemos soluções tecnológicas personalizadas para micro e pequenas empresas que querem crescer no mundo digital.",
-        bt: {
-            cta: "Solicitar Orçamento",
-            features: "Nossos Serviços"
-        }
+    desc: "Desenvolvemos soluções tecnológicas personalizadas para micro e pequenas empresas que querem crescer no mundo digital.",
+    bt: {
+      cta: "Solicitar Orçamento",
+      features: "Nossos Serviços",
     },
+  },
 
+  features: {
+    badge: "O que fazemos",
+    title: "Soluções completas para sua empresa",
+    desc: "Oferecemos serviços de tecnologia personalizados para impulsionar o crescimento do seu negócio.",
+    services: {
+      webDevelopment: {
+        title: "Desenvolvimento Web",
+        desc: "Sites e sistemas web personalizados, responsivos e otimizados para seu negócio crescer online.",
+      },
+
+      mobileDevelopment: {
+        title: "Aplicativos Mobile",
+        desc: "Apps nativos e híbridos para Android e iOS, com design intuitivo e performance excepcional.",
+      },
+
+      cloudComputing: {
+        title: "Cloud Computing",
+        desc: "Migração e gestão de infraestrutura em nuvem para maior segurança e escalabilidade.",
+      },
+
+      businessIntelligence: {
+        title: "Business Intelligence",
+        desc: "Análise de dados e dashboards inteligentes para tomada de decisões estratégicas.",
+      },
+
+      digitalSecurity: {
+        title: "Segurança Digital",
+        desc: "Proteção de dados, backup automático e implementação de melhores práticas de segurança.",
+      },
+
+      technicalSupport: {
+        title: "Suport Técnico",
+        desc: "Atendimento personalizado e suporte contínuo para garantir o funcionamento perfeito.",
+      },
+    },
+  },
+
+  about: {
+    badge: "Quem somos",
+    title: {
+      a: "Tecnologia que impulsiona",
+      b: "resultados",
+    },
+    desc: "A Zior é especializada em desenvolver soluções tecnológicas para micro e pequenas empresas que desejam se destacar no mercado digital.",
+    subDesc:
+      "Nossa missão é tornar a tecnologia acessível e eficiente, oferecendo serviços de qualidade com atendimento personalizado. Acreditamos que toda empresa, independente do tamanho, merece ter acesso às melhores ferramentas digitais.",
+    strengths: [
+      "Soluções personalizadas para cada negócio",
+      "Suporte técnico contínuo",
+      "Preços justos e transparentes",
+      "Prazos de entrega respeitados",
+      "Equipe especializada e certificada",
+      "Tecnologias modernas e atualizadas",
+    ],
+    stats: [
+      { value: "50+", desc: "Projetos Entregues" },
+      { value: "98%", desc: "Clientes Satisfeitos" },
+      { value: "5+", desc: "Anos de Experiência" },
+      { value: "24/7", desc: "Suporte Disponível" },
+    ],
+  },
+
+  contact: {
+    badge: "Entre em Contato",
+    title: "Vamos Conversar?",
+    desc: "Estamos prontos para transformar suas ideias em realidade. Entre em contato através do WhatsApp e receba atendimento personalizado.",
+    type: [
+      { name: "Email", value: "contato@zior.com.br", icon: "mail" as IconKey },
+      { name: "Telefone", value: "(61) 98243-4750", icon: "phone" as IconKey },
+      {
+        name: "Localização",
+        value: "Santa Maria, DF - Brasil",
+        icon: "map" as IconKey,
+      },
+    ],
+    subTitle: "Atendimento via WhatsApp",
+    subDesc:
+      "Estamos prontos para transformar suas ideias em realidade. Entre em contato através do WhatsApp e receba atendimento personalizado.",
+    benefit: [
+      { name: "Resposta em até 5 minutos" },
+      { name: "Suporte especializado" },
+      { name: "Orçamento sem compromisso" },
+    ],
+    whatsappNumber: "5561982434750",
+    whatsappMessage: "Olá! Gostaria de mais informações sobre os serviços.",
+    cta: "Iniciar Conversa no Whatsapp",
+    status: "Online agora - Pronto para atender",
+  },
+
+  footer: {
+    desc: "Transformando ideias em soluções tecnológicas para micro e pequenas empresas.",
     features: {
-        badge: "O que fazemos",
-        title: "Soluções completas para sua empresa",
-        desc: "Oferecemos serviços de tecnologia personalizados para impulsionar o crescimento do seu negócio.",
-        services: {
-            webDevelopment: {
-                title: "Desenvolvimento Web",
-                desc: "Sites e sistemas web personalizados, responsivos e otimizados para seu negócio crescer online.",
-            },
-
-            mobileDevelopment: {
-                title: "Aplicativos Mobile",
-                desc: "Apps nativos e híbridos para Android e iOS, com design intuitivo e performance excepcional."
-            },
-
-            cloudComputing: {
-                title: "Cloud Computing",
-                desc: "Migração e gestão de infraestrutura em nuvem para maior segurança e escalabilidade."
-            },
-
-            businessIntelligence: {
-                title: "Business Intelligence",
-                desc: "Análise de dados e dashboards inteligentes para tomada de decisões estratégicas."
-            },
-
-            digitalSecurity: {
-                title: "Segurança Digital",
-                desc: "Proteção de dados, backup automático e implementação de melhores práticas de segurança."
-            },
-
-            technicalSupport: {
-                title: "Suport Técnico",
-                desc: "Atendimento personalizado e suporte contínuo para garantir o funcionamento perfeito."
-            }
-        }
+      title: "Serviços",
+      items: [
+        "Desenvolvimento Web",
+        "Aplicativos Mobile",
+        "Cloud Computing",
+        "Business Intelligence",
+        "Segurança Digital",
+        "Suport Técnico",
+      ],
     },
-
-    about: {
-        badge: "Quem somos",
-        title: {
-            a: "Tecnologia que impulsiona",
-            b: "resultados"
-        },
-        desc: "A Zior é especializada em desenvolver soluções tecnológicas para micro e pequenas empresas que desejam se destacar no mercado digital.",
-        subDesc: "Nossa missão é tornar a tecnologia acessível e eficiente, oferecendo serviços de qualidade com atendimento personalizado. Acreditamos que toda empresa, independente do tamanho, merece ter acesso às melhores ferramentas digitais.",
-        strengths: [
-            "Soluções personalizadas para cada negócio",
-            "Suporte técnico contínuo",
-            "Preços justos e transparentes",
-            "Prazos de entrega respeitados",
-            "Equipe especializada e certificada",
-            "Tecnologias modernas e atualizadas",
-        ],
-        stats: [
-            { value: "50+", desc: "Projetos Entregues" },
-            { value: "98%", desc: "Clientes Satisfeitos" },
-            { value: "5+", desc: "Anos de Experiência" },
-            { value: "24/7", desc: "Suporte Disponível" }
-        ]
+    company: {
+      title: "Empresa",
+      items: ["Sobre Nós", "Portfólio", "Blog", "Carreiras"],
     },
-
     contact: {
-        badge: "Entre em Contato",
-        title: "Vamos Conversar?",
-        desc: "Estamos prontos para transformar suas ideias em realidade. Entre em contato através do WhatsApp e receba atendimento personalizado.",
-        type: [
-            { name: "Email", value: "contato@zior.com.br", icon: "mail" as IconKey },
-            { name: "Telefone", value: "(61) 98243-4750", icon: "phone" as IconKey },
-            { name: "Localização", value: "Santa Maria, DF - Brasil", icon: "map" as IconKey },
-        ],
-        subTitle: "Atendimento via WhatsApp", 
-        subDesc: "Estamos prontos para transformar suas ideias em realidade. Entre em contato através do WhatsApp e receba atendimento personalizado.",
-        benefit: [
-            { name: "Resposta em até 5 minutos" },
-            { name: "Suporte especializado"},
-            { name: "Orçamento sem compromisso"},
-        ],
-        whatsappNumber: "5561982434750",
-        whatsappMessage: "Olá! Gostaria de mais informações sobre os serviços.",
-        cta: "Iniciar Conversa no Whatsapp",
-        status: "Online agora - Pronto para atender"
+      title: "Contato",
+      items: [
+        "contato@zior.com.br",
+        "(11) 99999-9999",
+        "São Paulo, SP",
+        "Brasil",
+      ],
     },
-
-    footer: {
-        desc: "Transformando ideias em soluções tecnológicas para micro e pequenas empresas.",
-        features: {
-            title: "Serviços",
-            items: [
-                "Desenvolvimento Web",
-                "Aplicativos Mobile",
-                "Cloud Computing",
-                "Business Intelligence",
-                "Segurança Digital", 
-                "Suport Técnico"
-            ]
-        },
-        company: {
-            title: "Empresa",
-            items: [
-                "Sobre Nós",
-                "Portfólio",
-                "Blog",
-                "Carreiras"
-            ]
-        },
-        contact: {
-            title: "Contato",
-            items: [
-                "contato@zior.com.br",
-                "(11) 99999-9999",
-                "São Paulo, SP",
-                "Brasil"
-            ]
-        },
-        rights: "© 2026 Zior Tecnologia. Todos os direitos reservados.",
-        legal: {
-            privacyPolicy: "Política de Privacidade",
-            terms: "Termos de Uso"
-        }
+    rights: "© 2026 Zior Tecnologia. Todos os direitos reservados.",
+    legal: {
+      privacyPolicy: "Política de Privacidade",
+      terms: "Termos de Uso",
     },
+  },
 };
